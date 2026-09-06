@@ -38,7 +38,7 @@
     --text: #25252B;
     --text-secondary: #4E4E55;
     --link: #205EA6;
-    --link-hover: #184C89;
+    --link-hover: #164173;
     --visited: #143964;
     --border: #E3E5E2;
     --code-bg: #EDEFF2;
@@ -59,7 +59,7 @@
     --text: #E4E4E7;
     --text-secondary: #C8C8CF;
     --link: #4C90C9;
-    --link-hover: #75A1C7;
+    --link-hover: #7BADD7;
     --visited: #8B8F97;
     --border: #26292A;
     --code-bg: #171A1A;
@@ -601,9 +601,14 @@ hr {
     text-underline-offset: 2px;
     text-decoration-thickness: 1px;
     text-decoration-color: color-mix(in srgb, var(--link) 40%, transparent);
+    transition:
+        color 0.15s ease,
+        text-decoration-color 0.15s ease,
+        text-decoration-thickness 0.15s ease;
 }
 .post-content a:hover {
-    text-decoration-color: var(--link);
+    text-decoration-color: var(--link-hover);
+    text-decoration-thickness: 2px;
 }
 
 /* External link indicator */
