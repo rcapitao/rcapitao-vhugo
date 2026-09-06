@@ -178,29 +178,17 @@ h4 {
     letter-spacing: -0.01em;
 }
 h1,
-h2 {
-    font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
-}
+h2,
 h3,
 h4 {
-    font-family:
-        "Open Sans",
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Roboto,
-        Oxygen,
-        Ubuntu,
-        Cantarell,
-        "Helvetica Neue",
-        sans-serif;
+    font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
 }
 h1 {
     font-size: 2.25rem;
     margin-bottom: 0.5rem;
 }
 h2 {
-    font-size: 1.6rem;
+    font-size: 1.45rem;
     margin-top: 2rem;
     margin-bottom: 0.75rem;
 }
@@ -385,7 +373,7 @@ hr {
         0 0 0 5px var(--accent);
 }
 .hero-name {
-    font-size: 2.5rem;
+    font-size: 2.25rem;
     margin-bottom: 0.4rem;
     line-height: 1.15;
 }
@@ -523,6 +511,7 @@ hr {
     text-decoration: none;
 }
 .post-entry-title {
+    font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
     font-size: 1.2rem;
     font-weight: 700;
     margin-bottom: 0.25rem;
@@ -551,7 +540,7 @@ hr {
     margin-bottom: 2rem;
 }
 .post-title {
-    font-size: 2.25rem;
+    font-size: 2.05rem;
     margin-bottom: 0.5rem;
     line-height: 1.2;
     overflow-wrap: break-word;
