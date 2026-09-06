@@ -32,11 +32,11 @@
     src: url("../fonts/open-sans-italic-latin-700.woff2") format("woff2");
 }
 @font-face {
-    font-family: "Fraunces";
+    font-family: "Source Serif 4";
     font-style: normal;
     font-weight: 700;
     font-display: swap;
-    src: url("../fonts/fraunces-latin-700.woff2") format("woff2");
+    src: url("../fonts/source-serif-4-latin-700.woff2") format("woff2");
 }
 
 /* --- Custom Properties -------------------------------------------------- */
@@ -179,7 +179,7 @@ h4 {
 }
 h1,
 h2 {
-    font-family: "Fraunces", Georgia, "Times New Roman", serif;
+    font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
 }
 h3,
 h4 {
