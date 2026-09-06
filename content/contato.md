@@ -4,7 +4,7 @@ description = 'Tem alguma dúvida ou apenas quer entrar em contato? Envie-me uma
 title = 'Contato'
 +++
 
-Se tiver dúvidas, sugestões ou quiser conversar sobre qualquer tema que apareça por aqui, estou à disposição. É só [me mandar um e-mail](mailto:contato@rcapitao.com), ficarei feliz em responder.
+Se tiver dúvidas, sugestões ou quiser conversar sobre qualquer tema que apareça por aqui, estou à disposição. É só [enviar uma mensagem](mailto:contato@rcapitao.com), ficarei feliz em responder.
 
 {{% details summary="Redes Sociais" %}}
 - [LinkedIn](https://linkedin.com/in/rafaelcapitao/)
