@@ -1,12 +1,28 @@
 {{- $src := .Destination -}}
 {{- $width := 0 -}}
 {{- $height := 0 -}}
+{{- $srcset := "" -}}
+{{- $sizes := "" -}}
 {{- if hasPrefix $src "/" -}}
   {{- $relPath := strings.TrimPrefix "/" $src -}}
   {{- $src = $relPath | relURL -}}
   {{- with resources.Get $relPath -}}
-    {{- $width = .Width -}}
-    {{- $height = .Height -}}
+    {{- $img := . -}}
+    {{- $width = $img.Width -}}
+    {{- $height = $img.Height -}}
+    {{- $candidates := slice 480 800 1200 1600 -}}
+    {{- $parts := slice -}}
+    {{- range $w := $candidates -}}
+      {{- if lt $w $width -}}
+        {{- $resized := $img.Resize (printf "%dx" $w) -}}
+        {{- $parts = $parts | append (printf "%s %dw" $resized.RelPermalink $w) -}}
+      {{- end -}}
+    {{- end -}}
+    {{- $parts = $parts | append (printf "%s %dw" $img.RelPermalink $width) -}}
+    {{- if gt (len $parts) 1 -}}
+      {{- $srcset = delimit $parts ", " -}}
+      {{- $sizes = "(max-width: 680px) 100vw, 680px" -}}
+    {{- end -}}
   {{- end -}}
 {{- end -}}
-<img src="{{ $src | safeURL }}" alt="{{ .Text }}" {{ with .Title }}title="{{ . }}"{{ end }} {{ if $width }}width="{{ $width }}" height="{{ $height }}"{{ end }} loading="lazy">
+<img src="{{ $src | safeURL }}" alt="{{ .Text }}" {{ with .Title }}title="{{ . }}"{{ end }} {{ if $width }}width="{{ $width }}" height="{{ $height }}"{{ end }} {{ with $srcset }}srcset="{{ . }}" sizes="{{ $sizes }}"{{ end }} loading="lazy">
