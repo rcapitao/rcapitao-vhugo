@@ -2,6 +2,15 @@
 
 > Blog de {{ site.Params.author }}, advogado especialista em Privacidade, Proteção de Dados e Segurança da Informação. Artigos sobre LGPD, privacidade digital, compliance e boas práticas de proteção de dados.
 
+## Páginas
+
+{{- with site.GetPage "sobre" }}
+- [{{ .Title }}]({{ .Permalink }}){{ with .Description }}: {{ . }}{{ end }}
+{{- end }}
+{{- with site.GetPage "privacy-rocks" }}
+- [{{ .Title }}]({{ .Permalink }}){{ with .Description }}: {{ . }}{{ end }}
+{{- end }}
+
 ## Posts
 
 {{- range where site.RegularPages "Section" "posts" }}
