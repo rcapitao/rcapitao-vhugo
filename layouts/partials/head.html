@@ -31,15 +31,23 @@
 {{- $css := resources.Get "css/main.css" | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
 
+{{/* PWA manifest and home-screen icon */}}
+<link rel="manifest" href="{{ "manifest.json" | relURL }}">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ "images/apple-touch-icon.png" | relURL }}">
+
+{{/* Browser UI color — kept in sync with the active theme by the scripts below */}}
+<meta name="theme-color" content="#F4F4F5">
+
 {{/* Flash-free theme initialization — runs before first paint */}}
 <script>
   (function() {
     var saved = localStorage.getItem('theme');
-    if (saved === 'dark' || saved === 'light') {
-      document.documentElement.dataset.theme = saved;
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    var isDark = saved === 'dark' || (saved !== 'light' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (isDark) {
       document.documentElement.dataset.theme = 'dark';
     }
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute('content', isDark ? '#1C1C20' : '#F4F4F5');
   })();
 </script>
 
