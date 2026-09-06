@@ -31,15 +31,23 @@
 {{- $css := resources.Get "css/main.css" | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
 
+{{/* PWA manifest and home-screen icon */}}
+<link rel="manifest" href="{{ "manifest.json" | relURL }}">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ "images/apple-touch-icon.png" | relURL }}">
+
+{{/* Browser UI color — kept in sync with the active theme by the scripts below */}}
+<meta name="theme-color" content="#F4F4F5">
+
 {{/* Flash-free theme initialization — runs before first paint */}}
 <script>
   (function() {
     var saved = localStorage.getItem('theme');
-    if (saved === 'dark' || saved === 'light') {
-      document.documentElement.dataset.theme = saved;
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    var isDark = saved === 'dark' || (saved !== 'light' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (isDark) {
       document.documentElement.dataset.theme = 'dark';
     }
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute('content', isDark ? '#1C1C20' : '#F4F4F5');
   })();
 </script>
 
@@ -48,23 +56,23 @@
   <style>
     @media (prefers-color-scheme: dark) {
       :root {
-        --bg: #1c1917;
-        --text: #fafaf9;
-        --text-secondary: #a8a29e;
-        --link: #60a5fa;
-        --link-hover: #93bbfd;
-        --border: #44403c;
-        --code-bg: #292524;
-        --code-text: #d6d3d1;
-        --code-block-bg: #292524;
-        --code-block-text: #d6d3d1;
-        --tag-bg: #292524;
-        --tag-text: #d6d3d1;
-        --blockquote-border: #57534e;
-        --selection-bg: #60a5fa;
-        --selection-text: #1c1917;
-        --hover-bg: #292524;
-        --accent: #60a5fa;
+        --bg: #1C1C20;
+        --text: #E4E4E7;
+        --text-secondary: #C8C8CF;
+        --link: #4385BE;
+        --link-hover: #75A1C7;
+        --border: #26292A;
+        --code-bg: #171A1A;
+        --code-text: #C8DBEB;
+        --code-block-bg: #171A1A;
+        --code-block-text: #E4E2DA;
+        --tag-bg: #1B1F23;
+        --tag-text: #75A1C7;
+        --blockquote-border: #205EA6;
+        --selection-bg: #18334B;
+        --selection-text: #E4E2DA;
+        --hover-bg: #1D1D22;
+        --accent: #4385BE;
         color-scheme: dark;
       }
     }
@@ -168,6 +176,8 @@
 }
 </script>
 {{- else if .IsPage }}
+{{- $sameAs := slice }}
+{{- range site.Params.socialLinks }}{{ $sameAs = $sameAs | append .url }}{{ end }}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -180,7 +190,8 @@
   "image": {{ . }}{{ end }}{{ with site.Params.author }},
   "author": {
     "@type": "Person",
-    "name": {{ . }}
+    "name": {{ . }}{{ with $sameAs }},
+    "sameAs": [{{ range $i, $url := . }}{{ if $i }}, {{ end }}{{ $url }}{{ end }}]{{ end }}
   }{{ end }},
   "publisher": {
     "@type": "Organization",
