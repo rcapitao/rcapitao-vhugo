@@ -168,6 +168,8 @@
 }
 </script>
 {{- else if .IsPage }}
+{{- $sameAs := slice }}
+{{- range site.Params.socialLinks }}{{ $sameAs = $sameAs | append .url }}{{ end }}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -180,7 +182,8 @@
   "image": {{ . }}{{ end }}{{ with site.Params.author }},
   "author": {
     "@type": "Person",
-    "name": {{ . }}
+    "name": {{ . }}{{ with $sameAs }},
+    "sameAs": [{{ range $i, $url := . }}{{ if $i }}, {{ end }}{{ $url }}{{ end }}]{{ end }}
   }{{ end }},
   "publisher": {
     "@type": "Organization",
