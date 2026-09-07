@@ -1,0 +1,29 @@
+{{ define "main" }}
+<div class="archive-header-row">
+  <h1 class="page-title">{{ .Title }}</h1>
+  {{- $groups := .Pages.GroupByPublishDate "2006 - January" }}
+  <select class="archive-jump" onchange="if(this.value) window.location.hash = this.value;">
+    <option value="">Ir para o mês…</option>
+    {{- range $groups }}
+    <option value="{{ .Key | urlize }}">{{ .Key | title }}</option>
+    {{- end }}
+  </select>
+</div>
+
+{{- range $groups }}
+<h2 id="{{ .Key | urlize }}" class="archive-pill-heading">{{ .Key | title }}</h2>
+<ul class="post-list">
+    {{- range .Pages }}
+    <li class="post-entry">
+        <a href="{{ .Permalink }}" class="post-entry-link">
+            <h3 class="post-entry-title">{{ .Title }}</h3>
+            {{ partial "post_meta.html" . }} {{- with .Description | default
+            .Summary }}
+            <p class="post-entry-summary">{{ . | plainify | truncate 160 }}</p>
+            {{- end }}
+        </a>
+    </li>
+    {{- end }}
+</ul>
+{{- end }}
+{{ end }}
