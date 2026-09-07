@@ -37,7 +37,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="{{ "images/apple-touch-icon.png" | relURL }}">
 
 {{/* Browser UI color — kept in sync with the active theme by the scripts below */}}
-<meta name="theme-color" content="#F4F4F5">
+<meta name="theme-color" content="#F8F8F9">
 
 {{/* Flash-free theme initialization — runs before first paint */}}
 <script>
@@ -48,7 +48,7 @@
       document.documentElement.dataset.theme = 'dark';
     }
     var meta = document.querySelector('meta[name="theme-color"]');
-    if (meta) meta.setAttribute('content', isDark ? '#1C1C20' : '#F4F4F5');
+    if (meta) meta.setAttribute('content', isDark ? '#1C2442' : '#F8F8F9');
   })();
 </script>
 
@@ -57,23 +57,23 @@
   <style>
     @media (prefers-color-scheme: dark) {
       :root {
-        --bg: #1C1C20;
-        --text: #E4E4E7;
-        --text-secondary: #C8C8CF;
-        --link: #4C90C9;
-        --link-hover: #7BADD7;
-        --border: #26292A;
-        --code-bg: #171A1A;
-        --code-text: #C8DBEB;
-        --code-block-bg: #171A1A;
-        --code-block-text: #E4E2DA;
-        --tag-bg: #1B1F23;
-        --tag-text: #75A1C7;
-        --blockquote-border: #205EA6;
-        --selection-bg: #18334B;
-        --selection-text: #E4E2DA;
-        --hover-bg: #1D1D22;
-        --accent: #4385BE;
+        --bg: #1C2442;
+        --text: #F8F8F9;
+        --text-secondary: #C1CFE4;
+        --link: #8F95C4;
+        --link-hover: #C1CFE4;
+        --border: #8F95C4;
+        --code-bg: #8F95C4;
+        --code-text: #1C2442;
+        --code-block-bg: #1C2442;
+        --code-block-text: #C1CFE4;
+        --tag-bg: #8F95C4;
+        --tag-text: #1C2442;
+        --blockquote-border: #8B2B26;
+        --selection-bg: #8F95C4;
+        --selection-text: #F8F8F9;
+        --hover-bg: #C1CFE4;
+        --accent: #8F95C4;
         color-scheme: dark;
       }
     }
