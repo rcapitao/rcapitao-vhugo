@@ -524,6 +524,42 @@ hr {
     margin-top: 0.5rem;
 }
 
+/* --- Blog archive (agrupado por mês) ------------------------------------- */
+.archive-header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+.archive-header-row .page-title {
+    margin-bottom: 0;
+}
+.archive-jump {
+    font-family: inherit;
+    font-size: 0.9rem;
+    color: var(--text);
+    background-color: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 0.5rem 0.75rem;
+    cursor: pointer;
+}
+.archive-jump:hover {
+    border-color: var(--link-hover);
+}
+.archive-pill-heading {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--text-secondary);
+    margin: 2.5rem 0 0.75rem;
+    scroll-margin-top: 5rem;
+}
+.archive-pill-heading:first-of-type {
+    margin-top: 2rem;
+}
+
 /* --- Post Meta ---------------------------------------------------------- */
 .post-meta {
     color: var(--text-secondary);
