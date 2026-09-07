@@ -41,45 +41,45 @@
 
 /* --- Custom Properties -------------------------------------------------- */
 :root {
-    --bg: #F8F8F9;
-    --text: #1C2442;
-    --text-secondary: #464E86;
-    --link: #464E86;
-    --link-hover: #1C2442;
-    --visited: #464E86;
-    --border: #E3E5E9;
-    --code-bg: #E3E5E9;
-    --code-text: #1C2442;
-    --code-block-bg: #1C2442;
-    --code-block-text: #C1CFE4;
-    --tag-bg: #E3E5E9;
-    --tag-text: #1C2442;
-    --blockquote-border: #8B2B26;
-    --selection-bg: #C1CFE4;
-    --selection-text: #1C2442;
-    --hover-bg: #C1CFE4;
-    --accent: #8F95C4;
+    --bg: #F4F4F5;
+    --text: #25252B;
+    --text-secondary: #4E4E55;
+    --link: #205EA6;
+    --link-hover: #164173;
+    --visited: #143964;
+    --border: #E3E5E2;
+    --code-bg: #EDEFF2;
+    --code-text: #143964;
+    --code-block-bg: #16181A;
+    --code-block-text: #E4E2DA;
+    --tag-bg: #EDEFF2;
+    --tag-text: #184C89;
+    --blockquote-border: #4385BE;
+    --selection-bg: #CCDBED;
+    --selection-text: #1F2933;
+    --hover-bg: #E4E4E7;
+    --accent: #205EA6;
     color-scheme: light;
 }
 [data-theme="dark"] {
-    --bg: #1C2442;
-    --text: #F8F8F9;
-    --text-secondary: #C1CFE4;
-    --link: #8F95C4;
-    --link-hover: #C1CFE4;
-    --visited: #C1CFE4;
-    --border: #8F95C4;
-    --code-bg: #8F95C4;
-    --code-text: #1C2442;
-    --code-block-bg: #1C2442;
-    --code-block-text: #C1CFE4;
-    --tag-bg: #8F95C4;
-    --tag-text: #1C2442;
-    --blockquote-border: #8B2B26;
-    --selection-bg: #8F95C4;
-    --selection-text: #F8F8F9;
-    --hover-bg: #C1CFE4;
-    --accent: #8F95C4;
+    --bg: #1C1C20;
+    --text: #E4E4E7;
+    --text-secondary: #C8C8CF;
+    --link: #4C90C9;
+    --link-hover: #7BADD7;
+    --visited: #8B8F97;
+    --border: #26292A;
+    --code-bg: #171A1A;
+    --code-text: #C8DBEB;
+    --code-block-bg: #171A1A;
+    --code-block-text: #E4E2DA;
+    --tag-bg: #1B1F23;
+    --tag-text: #75A1C7;
+    --blockquote-border: #205EA6;
+    --selection-bg: #18334B;
+    --selection-text: #E4E2DA;
+    --hover-bg: #27272E;
+    --accent: #4385BE;
     color-scheme: dark;
 }
 
