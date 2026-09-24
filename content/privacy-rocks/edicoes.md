@@ -1,13 +1,21 @@
 +++
-date = '2025-11-24'
-description = 'Todas as edições da newsletter Privacy Rocks, da mais recente à primeira.'
-title = 'Edições da Privacy Rocks'
+draft = false
+title = "Edições da Privacy Rocks"
+date = "2025-11-24"
+description = "Todas as edições da newsletter Privacy Rocks, da mais recente à primeira."
+ShowToc = false
+TocOpen = false
+showLastmod = false
+noindex = false
+searchHidden = false
+hidden = false
+aliases = []
 +++
 
-Todas as edições da [Privacy Rocks](/privacy-rocks/), da mais recente à primeira.
+Todas as edições da [Privacy Rocks](https://www.linkedin.com/newsletters/7301707785006702592), da mais recente à primeira.
 
 | Edição | Data | Título |
-|---|---|---|
+| --- | --- | --- |
 | 026 | 24/11/2025 | [Parecer do EDPB, pegada digital em sistemas de IA e rastreamento de e-mails](https://www.linkedin.com/pulse/parecer-do-edpb-pegada-digital-em-sistemas-de-ia-e-e-mails-capit%C3%A3o-nroof/) |
 | 025 | 10/11/2025 | [Regulação da IA, novo Dia Nacional da Proteção de Dados e segurança no Louvre](https://www.linkedin.com/pulse/regula%C3%A7%C3%A3o-da-ia-novo-dia-nacional-prote%C3%A7%C3%A3o-de-dados-e-rafael-capit%C3%A3o-dfmdf/) |
 | 024 | 27/10/2025 | [Nova ISO 27701, truques de mascaramento no Gmail e descubra por que ignoramos políticas de privacidade e banners de cookies](https://www.linkedin.com/pulse/nova-iso-27701-truques-de-mascaramento-gmail-e-descubra-capit%C3%A3o-ipgvf/) |
