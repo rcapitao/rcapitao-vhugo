@@ -1,9 +1,16 @@
 +++
-date = '2026-03-27'
-description = 'No que estou trabalhando, lendo e pensando agora. Uma página no espírito do movimento /now atualizada com regularidade.'
-layout = 'now'
+draft = false
+title = "O que estou fazendo agora?"
+date = "2026-03-27"
+description = "No que estou trabalhando, lendo e pensando agora. Uma página no espírito do movimento /now atualizada com regularidade."
+ShowToc = false
+TocOpen = false
 showLastmod = true
-title = 'O que estou fazendo agora?'
+noindex = false
+searchHidden = false
+hidden = false
+aliases = []
+layout = "now"
 +++
 
 {{% details summary="O que é isso?" %}}
@@ -20,7 +27,7 @@ Mantenho também a newsletter [Privacy Rocks](/privacy-rocks), com insights prá
 
 ## Pessoal
 
-No tatame, sou faixa roxa 3 graus de Jiu-Jitsu, rumo à preta. 🥋
+No tatame, sou faixa roxa 4 graus de Jiu-Jitsu, rumo à preta. 🥋
 
 Também estou voltando a fotografar depois de um tempo parado, recuperando o hábito de sair com a câmera e prestar atenção no que está ao redor.
 
