@@ -123,7 +123,11 @@ collections:
         fields: *page_fields
       - name: privacy_rocks
         label: Privacy Rocks
-        file: content/privacy-rocks.md
+        file: content/privacy-rocks/_index.md
+        fields: *page_fields
+      - name: privacy_rocks_edicoes
+        label: "Privacy Rocks — Edições"
+        file: content/privacy-rocks/edicoes.md
         fields: *page_fields
       - name: projetos
         label: Projetos
