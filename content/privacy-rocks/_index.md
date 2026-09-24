@@ -18,4 +18,4 @@ Cada edição reúne análises diretas, tendências relevantes, aprendizados de 
 
 As edições são publicadas **mensalmente**, sempre no primeiro dia do mês.
 
-Para acessar todas as postagens [clique aqui](https://www.linkedin.com/newsletters/7301707785006702592).
+Para acessar todas as postagens [clique aqui](/privacy-rocks/edicoes/).
