@@ -13,5 +13,9 @@ Aqui você vai encontrar todos os links da web e redes sociais em que estou pres
 - [Instagram](https://instagram.com/rafael.capitao/)
 - [Mastodon](https://mastodon.social/@rcapitao)
 - [Bluesky](https://bsky.app/profile/rcapitao.com)
+- [X / Twitter](https://x.com/rafaelcapitao)
 - [Threads](https://threads.com/@rafael.capitao)
+
+## Repositório de Programação
+
 - [Github](https://github.com/rcapitao)
