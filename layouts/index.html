@@ -11,7 +11,7 @@
   <img src="{{ $relPath | relURL }}" alt="{{ site.Params.author | default site.Title }}" class="hero-image">
   {{- end }}
   {{- end }}
-  <h1 class="hero-name">{{ site.Params.homeTitle | default site.Title }}</h1>
+  <h1 class="hero-name hero-name-accent">{{ site.Params.homeTitle | default site.Title }}</h1>
   {{- with site.Params.homeSubtitle }}
   <p class="hero-subtitle">{{ . }}</p>
   {{- end }}
