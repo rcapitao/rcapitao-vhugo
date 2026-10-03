@@ -125,152 +125,40 @@ collections:
         label: Privacy Rocks
         file: content/privacy-rocks/_index.md
         fields: *page_fields
-      - name: privacy_rocks_edicoes
-        label: "Privacy Rocks — Edições"
+      - name: privacy_rocks_indice
+        label: "Privacy Rocks — Índice de Edições"
         file: content/privacy-rocks/edicoes.md
         fields: *page_fields
-      - name: privacy_rocks_edicao_032
-        label: "Privacy Rocks — Edição 032"
-        file: content/privacy-rocks/032.md
-        fields: &post_like_fields
-          - *f_draft
-          - { label: Título, name: title, widget: string }
-          - { label: Data, name: date, widget: datetime, format: "YYYY-MM-DD HH:mm:ssZ", output_utc: true }
-          - { label: Descrição, name: description, widget: text }
-          - { label: Etiquetas, name: tags, widget: tags-select, tag_options: ["Citações", "Dicas", "Filmes", "Governança de Privacidade", "Guias", "Inteligência Artificial", "LGPD", "Livros", "Privacidade", "Privacy Rocks", "Produtividade", "Reflexão", "Segurança da Informação", "Sharenting"] }
-          - *f_showtoc
-          - *f_tocopen
-          - *f_showlastmod
-          - *f_noindex
-          - *f_searchhidden
-          - *f_hidden
-          - *f_aliases
-          - { label: Corpo, name: body, widget: markdown }
-      - name: privacy_rocks_edicao_031
-        label: "Privacy Rocks — Edição 031"
-        file: content/privacy-rocks/031.md
-        fields: *post_like_fields
-      - name: privacy_rocks_edicao_030
-        label: "Privacy Rocks — Edição 030"
-        file: content/privacy-rocks/030.md
-        fields: *post_like_fields
-      - name: privacy_rocks_edicao_029
-        label: "Privacy Rocks — Edição 029"
-        file: content/privacy-rocks/029.md
-        fields: *post_like_fields
-      - name: privacy_rocks_edicao_028
-        label: "Privacy Rocks — Edição 028"
-        file: content/privacy-rocks/028.md
-        fields: *post_like_fields
-      - name: privacy_rocks_edicao_027
-        label: "Privacy Rocks — Edição 027"
-        file: content/privacy-rocks/027.md
-        fields: *post_like_fields
-      - name: privacy_rocks_edicao_026
-        label: "Privacy Rocks — Edição 026"
-        file: content/privacy-rocks/026.md
-        fields: *post_like_fields
-      - name: privacy_rocks_edicao_025
-        label: "Privacy Rocks — Edição 025"
-        file: content/privacy-rocks/025.md
-        fields: *post_like_fields
-      - name: privacy_rocks_edicao_024
-        label: "Privacy Rocks — Edição 024"
-        file: content/privacy-rocks/024.md
-        fields: *post_like_fields
-      - name: privacy_rocks_edicao_023
-        label: "Privacy Rocks — Edição 023"
-        file: content/privacy-rocks/023.md
-        fields: *post_like_fields
-      - name: privacy_rocks_edicao_022
-        label: "Privacy Rocks — Edição 022"
-        file: content/privacy-rocks/022.md
-        fields: *post_like_fields
-      - name: privacy_rocks_edicao_021
-        label: "Privacy Rocks — Edição 021"
-        file: content/privacy-rocks/021.md
-        fields: *post_like_fields
-      - name: privacy_rocks_edicao_020
-        label: "Privacy Rocks — Edição 020"
-        file: content/privacy-rocks/020.md
-        fields: *post_like_fields
-      - name: privacy_rocks_edicao_019
-        label: "Privacy Rocks — Edição 019"
-        file: content/privacy-rocks/019.md
-        fields: *post_like_fields
-      - name: privacy_rocks_edicao_018
-        label: "Privacy Rocks — Edição 018"
-        file: content/privacy-rocks/018.md
-        fields: *post_like_fields
-      - name: privacy_rocks_edicao_017
-        label: "Privacy Rocks — Edição 017"
-        file: content/privacy-rocks/017.md
-        fields: *post_like_fields
-      - name: privacy_rocks_edicao_016
-        label: "Privacy Rocks — Edição 016"
-        file: content/privacy-rocks/016.md
-        fields: *post_like_fields
-      - name: privacy_rocks_edicao_015
-        label: "Privacy Rocks — Edição 015"
-        file: content/privacy-rocks/015.md
-        fields: *post_like_fields
-      - name: privacy_rocks_edicao_014
-        label: "Privacy Rocks — Edição 014"
-        file: content/privacy-rocks/014.md
-        fields: *post_like_fields
-      - name: privacy_rocks_edicao_013
-        label: "Privacy Rocks — Edição 013"
-        file: content/privacy-rocks/013.md
-        fields: *post_like_fields
-      - name: privacy_rocks_edicao_012
-        label: "Privacy Rocks — Edição 012"
-        file: content/privacy-rocks/012.md
-        fields: *post_like_fields
-      - name: privacy_rocks_edicao_011
-        label: "Privacy Rocks — Edição 011"
-        file: content/privacy-rocks/011.md
-        fields: *post_like_fields
-      - name: privacy_rocks_edicao_010
-        label: "Privacy Rocks — Edição 010"
-        file: content/privacy-rocks/010.md
-        fields: *post_like_fields
-      - name: privacy_rocks_edicao_009
-        label: "Privacy Rocks — Edição 009"
-        file: content/privacy-rocks/009.md
-        fields: *post_like_fields
-      - name: privacy_rocks_edicao_008
-        label: "Privacy Rocks — Edição 008"
-        file: content/privacy-rocks/008.md
-        fields: *post_like_fields
-      - name: privacy_rocks_edicao_007
-        label: "Privacy Rocks — Edição 007"
-        file: content/privacy-rocks/007.md
-        fields: *post_like_fields
-      - name: privacy_rocks_edicao_006
-        label: "Privacy Rocks — Edição 006"
-        file: content/privacy-rocks/006.md
-        fields: *post_like_fields
-      - name: privacy_rocks_edicao_005
-        label: "Privacy Rocks — Edição 005"
-        file: content/privacy-rocks/005.md
-        fields: *post_like_fields
-      - name: privacy_rocks_edicao_004
-        label: "Privacy Rocks — Edição 004"
-        file: content/privacy-rocks/004.md
-        fields: *post_like_fields
-      - name: privacy_rocks_edicao_003
-        label: "Privacy Rocks — Edição 003"
-        file: content/privacy-rocks/003.md
-        fields: *post_like_fields
-      - name: privacy_rocks_edicao_002
-        label: "Privacy Rocks — Edição 002"
-        file: content/privacy-rocks/002.md
-        fields: *post_like_fields
-      - name: privacy_rocks_edicao_001
-        label: "Privacy Rocks — Edição 001"
-        file: content/privacy-rocks/001.md
-        fields: *post_like_fields
       - name: projetos
         label: Projetos
         file: content/projetos.md
         fields: *page_fields
+
+  - name: privacy_rocks_edicoes
+    label: "Privacy Rocks — Edições"
+    label_singular: Edição
+    folder: content/privacy-rocks
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    format: toml-frontmatter
+    frontmatter_delimiter: "+++"
+    # Só pega os posts de edição (001.md, 002.md...), não _index.md nem
+    # edicoes.md — essas duas continuam editáveis em "Páginas".
+    filter:
+      field: tags
+      value: "Privacy Rocks"
+    fields:
+      - *f_draft
+      - { label: Título, name: title, widget: string }
+      - { label: Data, name: date, widget: datetime, format: "YYYY-MM-DD HH:mm:ssZ", output_utc: true }
+      - { label: Descrição, name: description, widget: text }
+      - { label: Etiquetas, name: tags, widget: tags-select, tag_options: ["Citações", "Dicas", "Filmes", "Governança de Privacidade", "Guias", "Inteligência Artificial", "LGPD", "Livros", "Privacidade", "Privacy Rocks", "Produtividade", "Reflexão", "Segurança da Informação", "Sharenting"] }
+      - *f_showtoc
+      - *f_tocopen
+      - *f_showlastmod
+      - *f_noindex
+      - *f_searchhidden
+      - *f_hidden
+      - *f_aliases
+      - { label: Corpo, name: body, widget: markdown }
