@@ -144,12 +144,15 @@ collections:
     format: toml-frontmatter
     frontmatter_delimiter: "+++"
     # Só pega os posts de edição (001.md, 002.md...), não _index.md nem
-    # edicoes.md — essas duas continuam editáveis em "Páginas".
+    # edicoes.md — essas duas continuam editáveis em "Páginas". Filtrar
+    # pela tag (campo de lista) não funcionou no Sveltia, por isso usamos
+    # um campo escondido dedicado em vez disso.
     filter:
-      field: tags
-      value: "Privacy Rocks"
+      field: privacyRocksEdition
+      value: true
     fields:
       - *f_draft
+      - { name: privacyRocksEdition, widget: hidden, default: true }
       - { label: Título, name: title, widget: string }
       - { label: Data, name: date, widget: datetime, format: "YYYY-MM-DD HH:mm:ssZ", output_utc: true }
       - { label: Descrição, name: description, widget: text }
