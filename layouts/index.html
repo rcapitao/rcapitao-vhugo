@@ -11,11 +11,7 @@
   <img src="{{ $relPath | relURL }}" alt="{{ site.Params.author | default site.Title }}" class="hero-image">
   {{- end }}
   {{- end }}
-  {{- $homeTitle := site.Params.homeTitle | default site.Title }}
-  {{- $titleWords := split $homeTitle " " }}
-  {{- $lastWord := index $titleWords (sub (len $titleWords) 1) }}
-  {{- $leadWords := delimit (first (sub (len $titleWords) 1) $titleWords) " " }}
-  <h1 class="hero-name">{{ with $leadWords }}{{ . }} {{ end }}<span class="hero-name-accent">{{ $lastWord }}</span></h1>
+  <h1 class="hero-name hero-name-accent">{{ site.Params.homeTitle | default site.Title }}</h1>
   {{- with site.Params.homeSubtitle }}
   <p class="hero-subtitle">{{ . }}</p>
   {{- end }}
