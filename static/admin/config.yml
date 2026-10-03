@@ -39,7 +39,7 @@ collections:
       - { label: Título, name: title, widget: string }
       - { label: Data, name: date, widget: datetime, format: "YYYY-MM-DD HH:mm:ssZ", output_utc: true }
       - { label: Descrição, name: description, widget: text }
-      - { label: Etiquetas, name: tags, widget: tags-select, tag_options: ["Citações", "Dicas", "Filmes", "Governança de Privacidade", "Guias", "Inteligência Artificial", "LGPD", "Livros", "Privacidade", "Produtividade", "Reflexão", "Segurança da Informação", "Sharenting"] }
+      - { label: Etiquetas, name: tags, widget: tags-select, tag_options: ["Citações", "Dicas", "Filmes", "Governança de Privacidade", "Guias", "Inteligência Artificial", "LGPD", "Livros", "Privacidade", "Privacy Rocks", "Produtividade", "Reflexão", "Segurança da Informação", "Sharenting"] }
       - { label: Série, name: series, widget: string, required: false, hint: "Agrupa posts relacionados numa sequência numerada. Use o mesmo valor em 2 ou mais posts para ativar a navegação de série entre eles." }
 
       # --- Sumário -------------------------------------------------------
@@ -137,7 +137,7 @@ collections:
           - { label: Título, name: title, widget: string }
           - { label: Data, name: date, widget: datetime, format: "YYYY-MM-DD HH:mm:ssZ", output_utc: true }
           - { label: Descrição, name: description, widget: text }
-          - { label: Etiquetas, name: tags, widget: tags-select, tag_options: ["Citações", "Dicas", "Filmes", "Governança de Privacidade", "Guias", "Inteligência Artificial", "LGPD", "Livros", "Privacidade", "Produtividade", "Reflexão", "Segurança da Informação", "Sharenting"] }
+          - { label: Etiquetas, name: tags, widget: tags-select, tag_options: ["Citações", "Dicas", "Filmes", "Governança de Privacidade", "Guias", "Inteligência Artificial", "LGPD", "Livros", "Privacidade", "Privacy Rocks", "Produtividade", "Reflexão", "Segurança da Informação", "Sharenting"] }
           - *f_showtoc
           - *f_tocopen
           - *f_showlastmod
