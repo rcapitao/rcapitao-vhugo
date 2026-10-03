@@ -41,45 +41,54 @@
 
 /* --- Custom Properties -------------------------------------------------- */
 :root {
-    --bg: #F4F4F5;
-    --text: #25252B;
-    --text-secondary: #4E4E55;
-    --link: #205EA6;
-    --link-hover: #164173;
-    --visited: #143964;
-    --border: #E3E5E2;
-    --code-bg: #EDEFF2;
-    --code-text: #143964;
-    --code-block-bg: #16181A;
-    --code-block-text: #E4E2DA;
-    --tag-bg: #EDEFF2;
-    --tag-text: #184C89;
-    --blockquote-border: #4385BE;
-    --selection-bg: #CCDBED;
+    --bg: #FBFAF8;
+    --text: #1F2933;
+    --text-secondary: #4B535A;
+    --text-muted: #656C72;
+    --link: #8B2B26;
+    --link-hover: #602A2B;
+    --visited: #502A2D;
+    --accent: #8B2B26;
+    --focus-ring: #8B2B26;
+    --border: #E5E5E4;
+    --hover-bg: #F0F0EE;
+    --code-bg: #F1F1EF;
+    --code-text: #1F2933;
+    --code-block-bg: #1F2933;
+    --code-block-text: #FBFAF8;
+    --tag-bg: #F1E7E5;
+    --tag-text: #8B2B26;
+    --tag-hover-bg: #8B2B26;
+    --tag-hover-text: #FBFAF8;
+    --blockquote-border: #B27370;
+    --selection-bg: #E7D5D2;
     --selection-text: #1F2933;
-    --hover-bg: #E4E4E7;
-    --accent: #205EA6;
     color-scheme: light;
 }
+
 [data-theme="dark"] {
-    --bg: #1C1C20;
-    --text: #E4E4E7;
-    --text-secondary: #C8C8CF;
-    --link: #4C90C9;
-    --link-hover: #7BADD7;
-    --visited: #8B8F97;
-    --border: #26292A;
-    --code-bg: #171A1A;
-    --code-text: #C8DBEB;
-    --code-block-bg: #171A1A;
+    --bg: #0F0F10;
+    --text: #E4E2DA;
+    --text-secondary: #A8A7A1;
+    --text-muted: #868581;
+    --link: #9EA3D8;
+    --link-hover: #C4C6D9;
+    --visited: #7F82AC;
+    --accent: #9EA3D8;
+    --focus-ring: #9EA3D8;
+    --border: #292828;
+    --hover-bg: #1E1E1E;
+    --code-bg: #1C1C1C;
+    --code-text: #E4E2DA;
+    --code-block-bg: #1C1C1C;
     --code-block-text: #E4E2DA;
-    --tag-bg: #1B1F23;
-    --tag-text: #75A1C7;
-    --blockquote-border: #205EA6;
-    --selection-bg: #18334B;
+    --tag-bg: #22222A;
+    --tag-text: #BABCD9;
+    --tag-hover-bg: #9EA3D8;
+    --tag-hover-text: #0F0F10;
+    --blockquote-border: #73779C;
+    --selection-bg: #3A3B4C;
     --selection-text: #E4E2DA;
-    --hover-bg: #27272E;
-    --accent: #4385BE;
     color-scheme: dark;
 }
 
