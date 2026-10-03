@@ -377,6 +377,13 @@ hr {
     margin-bottom: 0.4rem;
     line-height: 1.15;
 }
+.hero-name-accent {
+    background-image: linear-gradient(135deg, #164173 0%, #7BADD7 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
 .hero-subtitle {
     color: var(--text-secondary);
     font-size: 1.1rem;
