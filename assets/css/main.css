@@ -47,13 +47,14 @@
   --link: #8B2B26;
   --link-hover: #6B1F1B;
   --visited: #7A4048;
-  --border: #C1CFE4;
+  --border: #D5DCE8;
   --code-bg: #E3E5E9;
   --code-text: #263052;
   --code-block-bg: #1C2442;
   --code-block-text: #E3E5E9;
-  --tag-bg: #C1CFE4;
-  --tag-text: #1C2442;
+  --tag-bg: #E3E5E9;
+  --tag-bg-hover: #C1CFE4;
+  --tag-text: #263052;
   --blockquote-border: #8F95C4;
   --selection-bg: #C1CFE4;
   --selection-text: #1C2442;
@@ -63,9 +64,9 @@
 }
 [data-theme="dark"] {
   --bg: #141A30;
-  --text: #F8F8F9;
+  --text: #E3E5E9;
   --text-secondary: #C1CFE4;
-  --link: #E07A72;
+  --link: #D98B82;
   --link-hover: #EDA19B;
   --visited: #B98A93;
   --border: #2F3A5E;
@@ -74,13 +75,24 @@
   --code-block-bg: #1C2442;
   --code-block-text: #E3E5E9;
   --tag-bg: #263052;
+  --tag-bg-hover: #2F3A5E;
   --tag-text: #C1CFE4;
   --blockquote-border: #8F95C4;
   --selection-bg: #3A4472;
   --selection-text: #F8F8F9;
   --hover-bg: #1C2442;
-  --accent: #E07A72;
+  --accent: #D98B82;
   color-scheme: dark;
+}
+
+a {
+  text-decoration-color: color-mix(in srgb, var(--link) 40%, transparent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: text-decoration-color 0.15s ease;
+}
+a:hover {
+  text-decoration-color: var(--link);
 }
 
 /* --- Reset -------------------------------------------------------------- */
