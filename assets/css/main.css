@@ -1038,13 +1038,17 @@ dd {
     background: var(--tag-bg);
     color: var(--tag-text);
     padding: 0.35rem 0.75rem;
+    border: 1px solid transparent;
     border-radius: 4px;
     font-size: 0.9rem;
     text-decoration: none;
-    transition: background-color 0.15s ease;
+    transition:
+        background-color 0.15s ease,
+        border-color 0.15s ease;
 }
 .terms-list a:hover {
     background: var(--border);
+    border-color: var(--tag-text);
     text-decoration: none;
 }
 .terms-count {
