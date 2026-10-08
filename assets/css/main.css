@@ -65,18 +65,18 @@
 [data-theme="dark"] {
   --bg: #0F0F10;
   --text: #E3E5E9;
-  --text-secondary: #C1CFE4;
+  --text-secondary: #D6D2C6;
   --link: #D98B82;
   --link-hover: #EDA19B;
   --visited: #B98A93;
   --border: #453B30;
   --code-bg: #2A2420;
-  --code-text: #C1CFE4;
+  --code-text: #D6D2C6;
   --code-block-bg: #1C2442;
   --code-block-text: #E3E5E9;
   --tag-bg: #2A2420;
   --tag-bg-hover: #332C25;
-  --tag-text: #C1CFE4;
+  --tag-text: #D6D2C6;
   --blockquote-border: #C9988C;
   --selection-bg: #564A28;
   --selection-text: #F8F8F9;
