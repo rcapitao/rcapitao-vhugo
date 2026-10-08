@@ -42,7 +42,7 @@
 /* --- Custom Properties -------------------------------------------------- */
 :root {
   --bg: #FBFAF8;
-  --text: #1F2933;
+  --text: #1C2442;
   --text-secondary: #4A5270;
   --link: #8B2B26;
   --link-hover: #6B1F1B;
@@ -64,7 +64,7 @@
 }
 [data-theme="dark"] {
   --bg: #0F0F10;
-  --text: #F8F8F9;
+  --text: #E3E5E9;
   --text-secondary: #C1CFE4;
   --link: #D98B82;
   --link-hover: #EDA19B;
