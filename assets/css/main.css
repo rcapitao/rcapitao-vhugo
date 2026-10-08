@@ -41,7 +41,7 @@
 
 /* --- Custom Properties -------------------------------------------------- */
 :root {
-  --bg: #fffcf0;
+  --bg: #F8F8F9;
   --text: #1C2442;
   --text-secondary: #4A5270;
   --link: #8B2B26;
@@ -63,7 +63,7 @@
   color-scheme: light;
 }
 [data-theme="dark"] {
-  --bg: #100f0f;
+  --bg: #1C2442;
   --text: #E3E5E9;
   --text-secondary: #C1CFE4;
   --link: #D98B82;
