@@ -1,7 +1,11 @@
+{{- $isEdition := eq .Section "privacy-rocks" }}
 {{- $posts := where site.RegularPages "Section" "posts" }}
+{{- if $isEdition }}
+{{- $posts = where (where site.RegularPages "Section" "privacy-rocks") "Params.privacyRocksEdition" true }}
+{{- end }}
 {{- $related := $posts.Related . | first 3 }} {{- with $related }}
 <section class="related-posts">
-    <h2>{{ i18n "related_posts" | default "Related Posts" }}</h2>
+    <h2>{{ if $isEdition }}{{ i18n "related_editions" | default "Related Editions" }}{{ else }}{{ i18n "related_posts" | default "Related Posts" }}{{ end }}</h2>
     <div class="related-grid">
         {{- range . }}
         <a href="{{ .Permalink }}" class="related-entry">
