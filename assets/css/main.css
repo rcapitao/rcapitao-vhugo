@@ -356,11 +356,12 @@ hr {
 .header-nav a {
     color: var(--text-secondary);
     font-size: 0.85rem;
+    text-decoration: none;
     transition: color 0.15s ease;
 }
 .header-nav a:hover {
     color: var(--text);
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 /* --- Theme Toggle ------------------------------------------------------- */
@@ -507,10 +508,11 @@ hr {
     color: var(--text-secondary);
     text-transform: uppercase;
     letter-spacing: 0.03em;
+    text-decoration: none;
 }
 .view-all:hover {
     color: var(--link);
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 /* --- Post List — card style --------------------------------------------- */
@@ -1165,6 +1167,12 @@ dd {
 }
 .footer-links {
     margin-bottom: 0.35rem;
+}
+.footer-links a {
+    text-decoration: none;
+}
+.footer-links a:hover {
+    text-decoration: underline;
 }
 
 /* --- Responsive --------------------------------------------------------- */
