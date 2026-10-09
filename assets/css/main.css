@@ -41,58 +41,75 @@
 
 /* --- Custom Properties -------------------------------------------------- */
 :root {
+  /* Light mode: editorial, clear and comfortable */
   --bg: #F8F8F9;
   --text: #1C2442;
   --text-secondary: #4A5270;
+
+  /* Links and accents */
   --link: #8B2B26;
   --link-hover: #6B1F1B;
-  --visited: #8F95C4;
+  --visited: #5D6398;
+  --accent: #8B2B26;
+  --focus: #666DA5;
+
+  /* Structure */
   --border: #D8E0EC;
+  --hover-bg: #EEF1F6;
+
+  /* Code */
   --code-bg: #E3E5E9;
   --code-text: #1C2442;
   --code-block-bg: #1C2442;
   --code-block-text: #E3E5E9;
+
+  /* Tags */
   --tag-bg: #E3E5E9;
   --tag-bg-hover: #C1CFE4;
   --tag-text: #1C2442;
+
+  /* Editorial content */
   --blockquote-border: #8F95C4;
   --selection-bg: #C1CFE4;
   --selection-text: #1C2442;
-  --hover-bg: #E3E5E9;
-  --accent: #8B2B26;
+
   color-scheme: light;
 }
+
 [data-theme="dark"] {
-  --bg: #0F0F10;
+  /* Dark mode: deep navy and cool tones */
+  --bg: #12182B;
   --text: #E3E5E9;
-  --text-secondary: #D6D2C6;
-  --link: #D98B82;
-  --link-hover: #EDA19B;
-  --visited: #8F95C4;
-  --border: #252D47;
-  --code-bg: #1C2442;
+  --text-secondary: #B9C3D8;
+
+  /* Links and accents */
+  --link: #E39A91;
+  --link-hover: #F0B2A9;
+  --visited: #B5B9EB;
+  --accent: #E39A91;
+  --focus: #B5B9EB;
+
+  /* Structure */
+  --border: #343D59;
+  --hover-bg: #252D47;
+
+  /* Code */
+  --code-bg: #252D47;
   --code-text: #E3E5E9;
   --code-block-bg: #1C2442;
   --code-block-text: #E3E5E9;
-  --tag-bg: #1C2442;
-  --tag-bg-hover: #2F3A5E;
+
+  /* Tags */
+  --tag-bg: #252D47;
+  --tag-bg-hover: #343D59;
   --tag-text: #E3E5E9;
+
+  /* Editorial content */
   --blockquote-border: #8F95C4;
   --selection-bg: #3A4472;
   --selection-text: #F8F8F9;
-  --hover-bg: #1C2442;
-  --accent: #D98B82;
-  color-scheme: dark;
-}
 
-a {
-  text-decoration-color: color-mix(in srgb, var(--link) 40%, transparent);
-  text-decoration-thickness: 1px;
-  text-underline-offset: 3px;
-  transition: text-decoration-color 0.15s ease;
-}
-a:hover {
-  text-decoration-color: var(--link);
+  color-scheme: dark;
 }
 
 /* --- Reset -------------------------------------------------------------- */
@@ -157,17 +174,29 @@ main {
 /* --- Links -------------------------------------------------------------- */
 a {
     color: var(--link);
-    text-decoration: none;
-    transition: color 0.15s ease;
+    text-decoration-color: color-mix(in srgb, currentColor 45%, transparent);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    transition:
+        color 0.15s ease,
+        text-decoration-color 0.15s ease;
+}
+a:visited {
+    color: var(--visited);
 }
 a:hover {
     color: var(--link-hover);
     text-decoration: underline;
+    text-decoration-color: currentColor;
+}
+/* Keep hover feedback stronger than visited-link coloring */
+a:visited:hover {
+    color: var(--link-hover);
 }
 
 /* --- Focus -------------------------------------------------------------- */
 :focus-visible {
-    outline: 2px solid var(--accent);
+    outline: 2px solid var(--focus);
     outline-offset: 2px;
     border-radius: 2px;
 }
@@ -858,7 +887,8 @@ pre code {
     opacity: 0;
     transition: opacity 0.2s ease;
 }
-.highlight:hover .code-copy {
+.highlight:hover .code-copy,
+.highlight:focus-within .code-copy {
     opacity: 1;
 }
 .code-copy:hover {
@@ -1088,10 +1118,10 @@ dd {
 }
 #searchInput:focus {
     border-color: var(--accent);
-    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--focus) 25%, transparent);
 }
 [data-theme="dark"] #searchInput:focus {
-    box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.15);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--focus) 25%, transparent);
 }
 #searchResults {
     margin-top: 1rem;
