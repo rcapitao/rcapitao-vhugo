@@ -1,9 +1,29 @@
 {{- $isEdition := eq .Section "privacy-rocks" }}
-{{- $posts := where site.RegularPages "Section" "posts" }}
+{{- $related := slice }}
 {{- if $isEdition }}
-{{- $posts = where (where site.RegularPages "Section" "privacy-rocks") "Params.privacyRocksEdition" true }}
+{{- $editions := (where (where site.RegularPages "Section" "privacy-rocks") "Params.privacyRocksEdition" true).ByDate }}
+{{- $idx := -1 }}
+{{- range $i, $e := $editions }}
+{{- if eq $e.RelPermalink $.RelPermalink }}
+{{- $idx = $i }}
 {{- end }}
-{{- $related := $posts.Related . | first 3 }} {{- with $related }}
+{{- end }}
+{{- if ge $idx 0 }}
+{{- $after := after (add $idx 1) $editions }}
+{{- $before := $editions | first $idx }}
+{{- $takeAfter := 2 }}
+{{- if lt (len $after) 2 }}{{ $takeAfter = len $after }}{{ end }}
+{{- $takeBefore := sub 3 $takeAfter }}
+{{- if gt $takeBefore (len $before) }}{{ $takeBefore = len $before }}{{ end }}
+{{- $relatedAfter := $after | first $takeAfter }}
+{{- $relatedBefore := $before | last $takeBefore }}
+{{- $related = union $relatedBefore $relatedAfter }}
+{{- end }}
+{{- else }}
+{{- $posts := where site.RegularPages "Section" "posts" }}
+{{- $related = $posts.Related . | first 3 }}
+{{- end }}
+{{- with $related }}
 <section class="related-posts">
     <h2>{{ if $isEdition }}{{ i18n "related_editions" | default "Related Editions" }}{{ else }}{{ i18n "related_posts" | default "Related Posts" }}{{ end }}</h2>
     <div class="related-grid">
