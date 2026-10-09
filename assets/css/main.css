@@ -498,7 +498,7 @@ hr {
     gap: 0.75rem;
 }
 .post-entry {
-    padding: 0.4rem 1.25rem;
+    padding: 0.3rem 1.25rem;
     border: 1px solid var(--border);
     border-radius: 8px;
     cursor: pointer;
@@ -1233,7 +1233,7 @@ dd {
         padding: 0.35rem 0.75rem;
     }
     .post-entry {
-        padding: 0.35rem 1rem;
+        padding: 0.25rem 1rem;
     }
     .post-entry-title {
         font-size: 1.1rem;
@@ -1277,7 +1277,7 @@ dd {
         font-size: 0.88rem;
     }
     .post-entry {
-        padding: 0.35rem 0.75rem;
+        padding: 0.25rem 0.75rem;
         border-radius: 6px;
     }
     .scroll-top {
