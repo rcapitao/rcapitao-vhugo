@@ -4,38 +4,30 @@
 {{- $ogImg := "" }}
 {{- $base := resources.Get "og/og-base.png" }}
 {{- $font := resources.Get "og/open-sans-variable.ttf" }}
-{{- if and $base $font }}
+{{- $titleFont := resources.Get "og/source-serif-4-700.ttf" }}
+{{- if and $base $font $titleFont }}
   {{- $title := .Data.Term | default .Title | default site.Title }}
   {{- $description := .Description | default site.Params.description | plainify }}
 
-  {{- $titleLines := partial "wraptext.html" (dict "text" $title "maxChars" 26 "maxLines" 3) }}
+  {{- $titleLines := partial "wraptext.html" (dict "text" $title "maxChars" 22 "maxLines" 3) }}
   {{- $descLines := partial "wraptext.html" (dict "text" $description "maxChars" 62 "maxLines" 2) }}
 
-  {{/* The font resource is a single (non-bold) weight, so the title is
-       drawn multiple times with a 1px offset in each direction to
-       synthesize a bold look ("poor man's bold"). */}}
-  {{- $boldOffsets := slice
-      (dict "dx" 0 "dy" 0) (dict "dx" 1 "dy" 0) (dict "dx" 2 "dy" 0)
-      (dict "dx" 0 "dy" 1) (dict "dx" 1 "dy" 1) (dict "dx" 2 "dy" 1)
-      (dict "dx" 0 "dy" 2) (dict "dx" 1 "dy" 2) (dict "dx" 2 "dy" 2)
-    }}
+  {{/* Title uses the site's actual heading face (Source Serif 4 Bold),
+       same as h1/h2/.post-title in main.css. */}}
   {{- $titleSize := 56 }}
   {{- $titleLineHeight := 70 }}
   {{- $titleTop := 110 }}
   {{- $titleFilters := slice }}
   {{- range $i, $line := $titleLines }}
-    {{- $y := add $titleTop (mul $i $titleLineHeight) }}
-    {{- range $boldOffsets }}
-      {{- $titleFilters = $titleFilters | append (images.Text $line (dict
-          "x" (add 70 .dx)
-          "y" (add $y .dy)
-          "size" $titleSize
-          "color" "1C2442"
-          "font" $font
-          "linespacing" 14
-        ))
-      }}
-    {{- end }}
+    {{- $titleFilters = $titleFilters | append (images.Text $line (dict
+        "x" 70
+        "y" (add $titleTop (mul $i $titleLineHeight))
+        "size" $titleSize
+        "color" "1C2442"
+        "font" $titleFont
+        "linespacing" 14
+      ))
+    }}
   {{- end }}
 
   {{- $descSize := 28 }}
