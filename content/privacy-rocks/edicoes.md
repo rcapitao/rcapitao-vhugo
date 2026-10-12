@@ -16,6 +16,7 @@ Todas as edições da [Privacy Rocks](https://www.linkedin.com/newsletters/73017
 
 | Edição | Data | Título |
 |---|---|---|
+| 033 | 12/10/2026 | [Conscientização em privacidade, verdade sobre navegadores e segurança infantil online](/privacy-rocks/033/) |
 | 032 | 01/06/2026 | [BrowserGate, Cultura Organizacional e Privacidade Física](/privacy-rocks/032/) |
 | 031 | 20/04/2026 | [LGPD para PMEs, segurança vs. privacidade, auditoria e dicas de privacidade](/privacy-rocks/031/) |
 | 030 | 06/04/2026 | [5 pilares que toda organização precisa dominar para estar em conformidade com a LGPD](/privacy-rocks/030/) |
