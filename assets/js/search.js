@@ -38,7 +38,7 @@ if (sInput) {
         }
       }
     };
-    xhr.open("GET", "../index.json");
+    xhr.open("GET", "../search-index.json");
     xhr.send();
   });
 

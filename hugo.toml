@@ -43,6 +43,12 @@ enableGitInfo = true
   baseName = 'llms'
   isPlainText = true
 
+[outputFormats.searchindex]
+  mediaType = 'application/json'
+  baseName = 'search-index'
+  isPlainText = true
+  notAlternative = true
+
 [markup.goldmark.renderer]
   unsafe = true
 
@@ -111,7 +117,7 @@ enableGitInfo = true
     weight = 3
 
 [outputs]
-  home = ['HTML', 'RSS', 'JSON', 'llmstxt']
+  home = ['HTML', 'RSS', 'SearchIndex', 'llmstxt']
   section = ['HTML']
 
 [related]
