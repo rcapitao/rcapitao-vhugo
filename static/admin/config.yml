@@ -62,6 +62,7 @@ collections:
   - name: pages
     label: Páginas
     label_singular: Página
+    delete: true
     format: toml-frontmatter
     frontmatter_delimiter: "+++"
     files:
