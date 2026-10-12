@@ -14,7 +14,7 @@ aliases = []
 tags = [ "Governança de Privacidade", "LGPD", "Livros", "Privacidade" ]
 +++
 
-![](/images/posts/livro_capa.jpg)
+<img src="/images/posts/livro_capa.jpg" alt="Capa do livro Encarregados: desafios, experiências e perspectivas" style="max-width: 280px; display: block; margin: 0 auto;">
 
 _Promover a conscientização em privacidade é, talvez, uma das tarefas mais complexas do Encarregado de Dados._
 
