@@ -21,6 +21,5 @@ Se tiver dúvidas, sugestões ou quiser conversar sobre qualquer tema que apare�
 - [Mastodon](https://mastodon.social/@rcapitao)
 - [Bluesky](https://bsky.app/profile/rcapitao.com)
 - [X / Twitter](https://x.com/rafaelcapitao)
-- [Threads](https://threads.com/@rafael.capitao)
 - [Github](https://github.com/rcapitao)
 {{% /details %}}
