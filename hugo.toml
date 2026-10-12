@@ -79,10 +79,6 @@ enableGitInfo = true
     url = 'https://bsky.app/profile/rcapitao.com'
     external = true
   [[params.socialLinks]]
-    name = 'Threads'
-    url = 'https://threads.com/@rafael.capitao'
-    external = true
-  [[params.socialLinks]]
     name = 'Github'
     url = 'https://github.com/rcapitao'
     external = true
