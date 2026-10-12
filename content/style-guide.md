@@ -155,7 +155,7 @@ Conteúdo que fica escondido até clicar no título. Aceita markdown normal.
 {{%/* /details */%}}
 ```
 
-Fica fechado por padrão. Exemplo usado na página [/agora/](/agora/):
+Fica fechado por padrão. Exemplo:
 
 {{% details summary="O que é isso?" %}}
 Você já deve ter visto por aqui a página [Sobre](/sobre). Esta é a [/now](https://nownownow.com/about), um conceito que existe em vários blogs pessoais e que mostra no que estou **focado neste momento da minha vida**, não um currículo nem um feed de redes sociais.
@@ -203,7 +203,7 @@ series = 'Nome da série' # ativa a navegação de série (ver acima)
 ShowToc = true # ativa o sumário (ver acima)
 TocOpen = true # sumário já aberto por padrão
 cover = '/images/capa-do-post.jpg' # imagem de OpenGraph própria (substitui o card gerado automaticamente)
-subtitle = 'Texto do menu expansivo' # usado apenas na página /agora/
+subtitle = 'Texto do menu expansivo' # usado em páginas com layout "now"
 showLastmod = true # exibe "Última atualização" (baseada em lastmod/git) abaixo do título
 aliases = ['/url-antiga/'] # redireciona URLs antigas para esta página
 draft = true # não publica a página (fica de fora do build de produção)

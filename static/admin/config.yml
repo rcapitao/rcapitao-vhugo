@@ -81,22 +81,6 @@ collections:
           - *f_hidden
           - *f_aliases
           - { label: Corpo, name: body, widget: markdown }
-      - name: agora
-        label: Agora
-        file: content/agora.md
-        fields:
-          - *f_draft
-          - { label: Título, name: title, widget: string }
-          - { label: Data, name: date, widget: datetime, format: "YYYY-MM-DD HH:mm:ssZ", output_utc: true, required: false }
-          - { label: Descrição, name: description, widget: text }
-          - *f_showtoc
-          - *f_tocopen
-          - *f_showlastmod
-          - *f_noindex
-          - *f_searchhidden
-          - *f_hidden
-          - *f_aliases
-          - { label: Corpo, name: body, widget: markdown }
       - name: apps_ferramentas
         label: Apps e Ferramentas
         file: content/apps-ferramentas.md
@@ -128,10 +112,6 @@ collections:
       - name: privacy_rocks_indice
         label: "Privacy Rocks — Índice de Edições"
         file: content/privacy-rocks/edicoes.md
-        fields: *page_fields
-      - name: projetos
-        label: Projetos
-        file: content/projetos.md
         fields: *page_fields
 
   - name: privacy_rocks_edicoes

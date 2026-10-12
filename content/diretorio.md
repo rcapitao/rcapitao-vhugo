@@ -12,10 +12,6 @@ Se você está procurando algo específico, esta página vai te direcionar para 
 
 **[Privacy Rocks](/privacy-rocks/)** - Minha newsletter sobre privacidade e proteção de dados, com mais de 1.200 assinantes. Análises, notícias e perspectivas práticas direto na sua caixa de entrada.
 
-**[Projetos](/projetos/)** - Conheça os projetos que estou desenvolvendo atualmente.
-
-**[O que eu estou fazendo agora](/agora/)** - No que estou trabalhando, lendo e pensando agora. Uma página no espírito do movimento /now atualizada com regularidade.
-
 **[Ferramentas e Apps](/apps-ferramentas/)** - As ferramentas e apps que uso no dia a dia: aplicativos, hardware, serviços e configurações que fazem parte da minha rotina pessoal, de trabalho e estudo.
 
 **[Tags](/tags/)** - Todos os assuntos que já apareceram por aqui.
