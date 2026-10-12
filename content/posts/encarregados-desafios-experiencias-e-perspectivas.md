@@ -1,9 +1,8 @@
 +++
-draft = true
+draft = false
 title = "Encarregados - desafios, experiências e perspectivas"
-date = "2026-10-11 22:35:00+00:00"
+date = "2026-10-12 19:11:00+00:00"
 description = "Veja por que conscientizar a organização em privacidade é um desafio do Encarregado e conheça estratégias práticas como Privacy Champions e campanhas temáticas."
-tags = [ "Governança de Privacidade", "LGPD", "Livros", "Privacidade" ]
 series = ""
 ShowToc = false
 TocOpen = false
@@ -12,6 +11,7 @@ noindex = false
 searchHidden = false
 hidden = false
 aliases = []
+tags = [ "Governança de Privacidade", "LGPD", "Livros", "Privacidade" ]
 +++
 
 ![](/images/posts/livro_capa.jpg)
