@@ -53,7 +53,7 @@ enableGitInfo = true
   unsafe = true
 
 [params]
-  description = 'Rafael Capitão, advogado especializado em compliance, privacidade e proteção de dados (LGPD). Artigos sobre segurança da informação e privacidade digital.'
+  description = 'Rafael Capitão, advogado especializado em compliance, privacidade e proteção de dados. Artigos sobre segurança da informação e privacidade digital.'
   author = 'Rafael Capitão'
   homeTitle = 'Rafael Capitão'
   homeMetaTitle = 'Rafael Capitão | Advogado de Privacidade e Proteção de Dados'
