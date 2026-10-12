@@ -26,7 +26,7 @@ No dia a dia, vejo muitas organizações enfrentando uma batalha silenciosa para
 - **Treinamentos genéricos, longos e técnicos demais** - reforçam a percepção de que privacidade é burocracia, e não algo ligado ao trabalho de cada área.
 - **Recursos limitados** - equipes reduzidas e orçamentos apertados exigem criatividade e estratégia para manter o engajamento.
 
-Foi sobre esses desafios, e principalmente sobre como superá-los, que escrevi o artigo **“A difícil missão de conscientizar a organização em privacidade e proteção de dados”**, publicado na obra coletiva **“Encarregados: desafios, experiências e perspectivas”**, coordenada por Ana Paula Canto de Lima e editada pela **Editora Império**.
+Foi sobre esses desafios, e principalmente sobre como superá-los, que escrevi o artigo **“A difícil missão de conscientizar a organização em privacidade e proteção de dados”**, publicado na obra coletiva **“Encarregados: desafios, experiências e perspectivas”**, coordenada por [Ana Paula Canto de Lima](https://www.linkedin.com/in/anapaulacantodelima/) e editada pela Editora Império.
 
 No texto, compartilho estratégias práticas, como personalização por área de negócio, programas de Privacy Champions, conteúdo visual e interativo e campanhas temáticas, além de uma reflexão sobre o que as telas de pedidos do McDonald’s têm a ensinar sobre conformidade “de fachada”. 🍔
 
