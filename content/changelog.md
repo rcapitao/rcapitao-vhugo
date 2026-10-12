@@ -1,4 +1,5 @@
 +++
+cms_page = true
 date = '2026-08-31'
 description = 'Registro das mudanças feitas neste blog: novidades, ajustes de design e correções, em ordem cronológica.'
 title = 'Changelog'
