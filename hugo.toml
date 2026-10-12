@@ -56,7 +56,7 @@ enableGitInfo = true
   favicon = '/images/favicon.png'
   homeSubtitle = 'Advogado | Compliance, Privacidade e Proteção de Dados'
   homeBio = 'Regulamentação e melhores práticas para a segurança da informação e a privacidade no ambiente digital'
-  recentPostsCount = 5
+  recentPostsCount = 3
 
   [[params.socialLinks]]
     name = 'LinkedIn'
