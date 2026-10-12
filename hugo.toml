@@ -43,11 +43,17 @@ enableGitInfo = true
   baseName = 'llms'
   isPlainText = true
 
+[outputFormats.searchindex]
+  mediaType = 'application/json'
+  baseName = 'search-index'
+  isPlainText = true
+  notAlternative = true
+
 [markup.goldmark.renderer]
   unsafe = true
 
 [params]
-  description = 'Rafael Capitão, advogado especializado em compliance, privacidade e proteção de dados (LGPD). Artigos sobre segurança da informação e privacidade digital.'
+  description = 'Rafael Capitão, advogado especializado em compliance, privacidade e proteção de dados. Artigos sobre segurança da informação e privacidade digital.'
   author = 'Rafael Capitão'
   homeTitle = 'Rafael Capitão'
   homeMetaTitle = 'Rafael Capitão | Advogado de Privacidade e Proteção de Dados'
@@ -111,7 +117,7 @@ enableGitInfo = true
     weight = 3
 
 [outputs]
-  home = ['HTML', 'RSS', 'JSON', 'llmstxt']
+  home = ['HTML', 'RSS', 'SearchIndex', 'llmstxt']
   section = ['HTML']
 
 [related]

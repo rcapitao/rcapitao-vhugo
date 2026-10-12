@@ -1,4 +1,5 @@
 +++
+cms_page = true
 date = '2026-07-09'
 description = 'Uma página dedicada às minhas certificações em privacidade e segurança da informação, como as emitidas pela IAPP e pela EXIN, com foco em proteção de dados.'
 title = 'Minhas Certificações'

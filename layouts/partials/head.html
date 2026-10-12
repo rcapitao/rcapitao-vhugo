@@ -210,7 +210,7 @@
 
 {{/* Search JS — only on search page */}}
 {{- if eq .Layout "search" -}}
-<link crossorigin="anonymous" rel="preload" as="fetch" href="../index.json">
+<link crossorigin="anonymous" rel="preload" as="fetch" href="../search-index.json">
 {{- $fusejs := resources.Get "js/fuse.basic.min.js" }}
 {{- $searchjs := resources.Get "js/search.js" | minify }}
 {{- $search := (slice $fusejs $searchjs) | resources.Concat "assets/js/search.js" | fingerprint }}

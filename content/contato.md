@@ -1,4 +1,5 @@
 +++
+cms_page = true
 draft = false
 title = "Contato"
 date = "2025-12-06"

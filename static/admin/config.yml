@@ -62,14 +62,49 @@ collections:
   - name: pages
     label: Páginas
     label_singular: Página
+    folder: content
+    create: true
     delete: true
+    slug: "{{slug}}"
     format: toml-frontmatter
     frontmatter_delimiter: "+++"
+    # Coleção "files" não suporta excluir entradas no Sveltia (delete só
+    # existe pra coleções "folder"). Por isso content/*.md virou uma
+    # coleção "folder", filtrada por este campo escondido para pegar só as
+    # páginas pensadas pra serem editadas por aqui — sem isso, /buscar/,
+    # /feed/, /privacidade/ e /style-guide/ também apareceriam (e ficariam
+    # expostas a exclusão sem querer).
+    filter:
+      field: cms_page
+      value: true
+    fields:
+      - *f_draft
+      - { name: cms_page, widget: hidden, default: true }
+      - { label: Título, name: title, widget: string }
+      - { label: Data, name: date, widget: datetime, format: "YYYY-MM-DD HH:mm:ssZ", output_utc: true, required: false }
+      - { label: Descrição, name: description, widget: text }
+      - *f_showtoc
+      - *f_tocopen
+      - *f_showlastmod
+      - *f_noindex
+      - *f_searchhidden
+      - *f_hidden
+      - *f_aliases
+      - { label: Corpo, name: body, widget: markdown }
+
+  - name: privacy_rocks_pages
+    label: "Privacy Rocks — Páginas"
+    label_singular: Página
+    format: toml-frontmatter
+    frontmatter_delimiter: "+++"
+    # _index.md e edicoes.md continuam em "files" (sem exclusão): são
+    # páginas estruturais da seção /privacy-rocks/, não publicações
+    # avulsas — apagá-las quebraria a seção inteira.
     files:
-      - name: sobre
-        label: Sobre
-        file: content/sobre.md
-        fields: &page_fields
+      - name: privacy_rocks
+        label: Privacy Rocks
+        file: content/privacy-rocks/_index.md
+        fields: &pr_page_fields
           - *f_draft
           - { label: Título, name: title, widget: string }
           - { label: Data, name: date, widget: datetime, format: "YYYY-MM-DD HH:mm:ssZ", output_utc: true, required: false }
@@ -82,38 +117,10 @@ collections:
           - *f_hidden
           - *f_aliases
           - { label: Corpo, name: body, widget: markdown }
-      - name: apps_ferramentas
-        label: Apps e Ferramentas
-        file: content/apps-ferramentas.md
-        fields: *page_fields
-      - name: certificacoes
-        label: Certificações
-        file: content/certificacoes.md
-        fields: *page_fields
-      - name: changelog
-        label: Changelog
-        file: content/changelog.md
-        fields: *page_fields
-      - name: contato
-        label: Contato
-        file: content/contato.md
-        fields: *page_fields
-      - name: diretorio
-        label: Diretório
-        file: content/diretorio.md
-        fields: *page_fields
-      - name: links
-        label: Links
-        file: content/links.md
-        fields: *page_fields
-      - name: privacy_rocks
-        label: Privacy Rocks
-        file: content/privacy-rocks/_index.md
-        fields: *page_fields
       - name: privacy_rocks_indice
         label: "Privacy Rocks — Índice de Edições"
         file: content/privacy-rocks/edicoes.md
-        fields: *page_fields
+        fields: *pr_page_fields
 
   - name: privacy_rocks_edicoes
     label: "Privacy Rocks — Edições"
