@@ -18,7 +18,7 @@ Hoje, integro a Comissão de Proteção de Dados e Privacidade da OAB-RJ, contri
 
 Minha abordagem é consultiva, colaborativa e orientada a resultados. Ajudo organizações a compreenderem seus ambientes de dados, estruturar processos mais seguros e reduzir riscos, sempre com o objetivo de transformar a privacidade em um ativo estratégico.
 
-Se quiser trocar ideias ou discutir temas relacionados a privacidade, proteção de dados ou segurança da informação, será um prazer [conversar](/contato/) e construir novas conexões!
+Se quiser trocar ideias ou discutir temas relacionados a privacidade, proteção de dados ou segurança da informação, será um prazer conversar e construir novas conexões!
 
 ## Quer se conectar comigo?
 
