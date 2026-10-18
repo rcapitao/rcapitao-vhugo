@@ -84,7 +84,7 @@ collections:
                   - { label: Título, name: title, widget: string, required: false }
                   - { label: Descrição, name: description, widget: string, required: false }
                   - { label: Link, name: href, widget: string, required: false, hint: "Página do site (ex.: /posts/), endereço completo (https://...) ou mailto:email@..." }
-                  - { label: Ícone, name: icon, widget: select, options: [{ label: "Globo (site, blog)", value: globe }, { label: "Envelope (e-mail)", value: envelope }, { label: "Ferramentas", value: screwdriver-wrench }, { label: "Sino (novidades)", value: bell }, { label: "LinkedIn", value: linkedin }, { label: "Instagram", value: instagram }, { label: "Mastodon", value: mastodon }, { label: "Bluesky", value: bluesky }, { label: "X (Twitter)", value: x-twitter }, { label: "GitHub", value: github }], required: false, hint: "Se ficar vazio, usa o globo." }
+                  - { label: Ícone, name: icon, widget: select, options: [{ label: "Globo (site, blog)", value: globe }, { label: "Envelope (e-mail)", value: envelope }, { label: "Ferramentas", value: screwdriver-wrench }, { label: "Sino (novidades)", value: bell }, { label: "Pessoa (sobre)", value: user }, { label: "Bússola (diretório)", value: compass }, { label: "LinkedIn", value: linkedin }, { label: "Instagram", value: instagram }, { label: "Mastodon", value: mastodon }, { label: "Bluesky", value: bluesky }, { label: "X (Twitter)", value: x-twitter }, { label: "GitHub", value: github }], required: false, hint: "Se ficar vazio, usa o globo." }
 
           # --- Rodapé ---------------------------------------------------------
           - { label: Frase do rodapé, name: footerNote, widget: string, required: false }

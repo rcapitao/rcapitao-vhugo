@@ -7,6 +7,15 @@
   src: url("../fonts/open-sans-latin-wght-normal.woff2") format("woff2");
 }
 
+/* Fonte do nome: a mesma usada em h1/h2/títulos de post no resto do site */
+@font-face {
+  font-family: "Source Serif 4";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/source-serif-4-latin-700.woff2") format("woff2");
+}
+
 /*
  * Paleta "Oslo"
  *   Frost Blue   #C1CFE4
@@ -24,14 +33,16 @@
   --bg-color: #F8F8F9;                         /* Glacier Mist */
   --text-color: #1C2442;                       /* Polar Night */
   --text-secondary: rgba(28, 36, 66, 0.64);    /* Polar Night 64% */
-  --surface: #FFFFFF;
+  --surface: rgba(255, 255, 255, 0.64);
   --border-color: rgba(28, 36, 66, 0.08);      /* Polar Night 8% */
   --icon-color: #8B2B26;                       /* Nordic Brick */
   --icon-tile: rgba(139, 43, 38, 0.09);        /* Nordic Brick 9% */
-  --social-bg: #E3E5E9;                        /* Icy Lilac */
+  --social-bg: rgba(227, 229, 233, 0.6);       /* Icy Lilac 60% */
   --social-hover-bg: #1C2442;                  /* Polar Night */
   --social-hover-icon: #F8F8F9;                /* Glacier Mist */
-  --card-hover-bg: #1C2442;                    /* Polar Night */
+  --card-hover-tint: rgba(28, 36, 66, 0.05);   /* Polar Night 5%: realce sutil do hover */
+  --card-hover-tint-border: rgba(28, 36, 66, 0.15);
+  --card-hover-bg: #1C2442;                    /* Polar Night: inversão forte só no :active */
   --card-hover-text: #F8F8F9;                  /* Glacier Mist */
   --card-hover-secondary: rgba(248, 248, 249, 0.72);
   --card-hover-icon: #C1CFE4;                  /* Frost Blue */
@@ -45,6 +56,12 @@
   --shadow-sm: 0 1px 2px rgba(28, 36, 66, 0.06);
   --shadow-md: 0 1px 2px rgba(28, 36, 66, 0.06), 0 4px 16px rgba(28, 36, 66, 0.06);
   --shadow-lg: 0 2px 4px rgba(28, 36, 66, 0.08), 0 12px 32px rgba(28, 36, 66, 0.16);
+
+  /* Manchas de luz bem discretas atrás dos cartões — dão profundidade ao
+     "vidro fosco" das superfícies (backdrop-filter), estilo Control Center. */
+  --wash: radial-gradient(circle at 12% 0%, rgba(193, 207, 228, 0.35) 0%, transparent 38%),
+          radial-gradient(circle at 92% 18%, rgba(143, 149, 196, 0.22) 0%, transparent 36%),
+          radial-gradient(circle at 15% 85%, rgba(139, 43, 38, 0.07) 0%, transparent 34%);
 }
 
 /* Modo escuro: segue o sistema, a menos que o botão de tema do blog tenha
@@ -62,7 +79,9 @@
     --social-bg: rgba(193, 207, 228, 0.1);     /* Frost Blue 10% */
     --social-hover-bg: #C1CFE4;                /* Frost Blue */
     --social-hover-icon: #1C2442;              /* Polar Night */
-    --card-hover-bg: #C1CFE4;                  /* Frost Blue */
+    --card-hover-tint: rgba(193, 207, 228, 0.1); /* Frost Blue 10%: realce sutil do hover */
+    --card-hover-tint-border: rgba(193, 207, 228, 0.28);
+    --card-hover-bg: #C1CFE4;                  /* Frost Blue: inversão forte só no :active */
     --card-hover-text: #1C2442;                /* Polar Night */
     --card-hover-secondary: rgba(28, 36, 66, 0.72);
     --card-hover-icon: #8B2B26;                /* Nordic Brick */
@@ -76,6 +95,9 @@
     --shadow-sm: none;
     --shadow-md: inset 0 1px 0 rgba(248, 248, 249, 0.04);
     --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.35);
+    --wash: radial-gradient(circle at 12% 0%, rgba(193, 207, 228, 0.16) 0%, transparent 40%),
+            radial-gradient(circle at 92% 18%, rgba(143, 149, 196, 0.18) 0%, transparent 38%),
+            radial-gradient(circle at 15% 85%, rgba(139, 43, 38, 0.14) 0%, transparent 36%);
   }
 }
 
@@ -91,7 +113,9 @@
   --social-bg: rgba(193, 207, 228, 0.1);     /* Frost Blue 10% */
   --social-hover-bg: #C1CFE4;                /* Frost Blue */
   --social-hover-icon: #1C2442;              /* Polar Night */
-  --card-hover-bg: #C1CFE4;                  /* Frost Blue */
+  --card-hover-tint: rgba(193, 207, 228, 0.1); /* Frost Blue 10%: realce sutil do hover */
+  --card-hover-tint-border: rgba(193, 207, 228, 0.28);
+  --card-hover-bg: #C1CFE4;                  /* Frost Blue: inversão forte só no :active */
   --card-hover-text: #1C2442;                /* Polar Night */
   --card-hover-secondary: rgba(28, 36, 66, 0.72);
   --card-hover-icon: #8B2B26;                /* Nordic Brick */
@@ -105,6 +129,9 @@
   --shadow-sm: none;
   --shadow-md: inset 0 1px 0 rgba(248, 248, 249, 0.04);
   --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.35);
+  --wash: radial-gradient(circle at 12% 0%, rgba(193, 207, 228, 0.16) 0%, transparent 40%),
+          radial-gradient(circle at 92% 18%, rgba(143, 149, 196, 0.18) 0%, transparent 38%),
+          radial-gradient(circle at 15% 85%, rgba(139, 43, 38, 0.14) 0%, transparent 36%);
 }
 
 /* Curva de animação no estilo iOS */
@@ -129,7 +156,8 @@ body {
   font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  background-color: var(--bg-color);
+  background: var(--wash) var(--bg-color);
+  background-attachment: fixed;
   color: var(--text-color);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -187,10 +215,11 @@ button {
 }
 
 .profile-name {
+  font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
   font-size: 30px;
   font-weight: 700;
   line-height: 1.15;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.005em;
 }
 
 .profile-desc {
@@ -221,6 +250,8 @@ button {
   font-size: 18px;
   background: var(--social-bg);
   color: var(--icon-color);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  backdrop-filter: blur(20px) saturate(160%);
   transition: background-color 0.3s var(--ease), color 0.3s var(--ease), transform 0.3s var(--ease);
 }
 
@@ -267,6 +298,8 @@ button {
   background: var(--surface);
   border: 1px solid var(--border-color);
   box-shadow: var(--shadow-md);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  backdrop-filter: blur(20px) saturate(160%);
   transition: background-color 0.35s var(--ease), border-color 0.35s var(--ease),
               color 0.35s var(--ease), box-shadow 0.35s var(--ease), transform 0.35s var(--ease);
 }
@@ -315,26 +348,19 @@ button {
   transition: transform 0.35s var(--ease), color 0.35s var(--ease), opacity 0.35s var(--ease);
 }
 
+/* Hover: realce sutil e translúcido — a inversão forte fica só pro :active,
+   como o toque num item da lista dos Ajustes do iOS. */
 .link-card:hover,
 .link-card:focus-visible {
-  background: var(--card-hover-bg);
-  border-color: var(--card-hover-bg);
-  color: var(--card-hover-text);
+  background: var(--card-hover-tint);
+  border-color: var(--card-hover-tint-border);
   box-shadow: var(--shadow-lg);
   transform: translateY(-2px);
 }
 
 .link-card:hover .link-icon,
 .link-card:focus-visible .link-icon {
-  background: var(--card-hover-tile);
-  color: var(--card-hover-icon);
-}
-
-.link-card:hover .link-desc,
-.link-card:focus-visible .link-desc,
-.link-card:hover .link-chevron,
-.link-card:focus-visible .link-chevron {
-  color: var(--card-hover-secondary);
+  transform: scale(1.06);
 }
 
 .link-card:hover .link-chevron,
@@ -343,14 +369,83 @@ button {
   transform: translateX(3px);
 }
 
+/* Active: a inversão forte (feedback de "pressionado") */
 .link-card:active {
+  background: var(--card-hover-bg);
+  border-color: var(--card-hover-bg);
+  color: var(--card-hover-text);
   transform: scale(0.98);
   transition-duration: 0.1s;
 }
 
+.link-card:active .link-icon {
+  background: var(--card-hover-tile);
+  color: var(--card-hover-icon);
+}
+
+.link-card:active .link-desc,
+.link-card:active .link-chevron {
+  color: var(--card-hover-secondary);
+}
+
+/* Alternar tema */
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  font-size: 16px;
+  background: var(--social-bg);
+  color: var(--icon-color);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  backdrop-filter: blur(20px) saturate(160%);
+  cursor: pointer;
+  transition: background-color 0.3s var(--ease), color 0.3s var(--ease), transform 0.3s var(--ease);
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus-visible {
+  background: var(--social-hover-bg);
+  color: var(--social-hover-icon);
+  transform: translateY(-2px);
+}
+
+.theme-toggle:active {
+  transform: scale(0.94);
+}
+
+.theme-toggle .icon-moon {
+  display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .theme-toggle .icon-sun {
+    display: none;
+  }
+  :root:not([data-theme="light"]) .theme-toggle .icon-moon {
+    display: inline-block;
+  }
+}
+
+:root[data-theme="dark"] .theme-toggle .icon-sun {
+  display: none;
+}
+
+:root[data-theme="dark"] .theme-toggle .icon-moon {
+  display: inline-block;
+}
+
 /* Foco visível para navegação por teclado */
 .social:focus-visible,
-.link-card:focus-visible {
+.link-card:focus-visible,
+.theme-toggle:focus-visible {
   outline: none;
   box-shadow: 0 0 0 3px var(--focus-ring), var(--shadow-lg);
 }
@@ -363,6 +458,8 @@ button {
   background: var(--surface);
   border: 1px solid var(--border-color);
   box-shadow: var(--shadow-md);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  backdrop-filter: blur(20px) saturate(160%);
 }
 
 .panel-title {
@@ -427,6 +524,8 @@ button {
   background: var(--surface);
   border: 1px solid var(--border-color);
   box-shadow: var(--shadow-md);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  backdrop-filter: blur(20px) saturate(160%);
   transition: box-shadow 0.35s var(--ease), transform 0.35s var(--ease);
 }
 
@@ -539,6 +638,8 @@ button {
   border-radius: 999px;
   background: var(--surface);
   box-shadow: var(--shadow-sm);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  backdrop-filter: blur(20px) saturate(160%);
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;

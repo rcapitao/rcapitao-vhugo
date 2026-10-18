@@ -15,6 +15,11 @@
        este link extra, oculto, segue à risca o HTML que o Mastodon pede para o verificador. */}}
   <a rel="me" href="https://mastodon.social/@rcapitao" style="display:none">Mastodon</a>
 
+  <button type="button" class="theme-toggle" id="homeThemeToggle" aria-label="Alternar tema" title="Alternar tema" aria-pressed="false">
+    {{ partial "biolink/icon.html" (dict "name" "sun" "class" "icon-sun") }}
+    {{ partial "biolink/icon.html" (dict "name" "moon" "class" "icon-moon") }}
+  </button>
+
   <main class="page">
     {{ partial "biolink/profile.html" . }}
 
