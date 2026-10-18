@@ -17,7 +17,5 @@ Se você está procurando algo específico, esta página vai te direcionar para 
 
 **[Tags](/tags/)** - Todos os assuntos que já apareceram por aqui.
 
-**[Changelog](/changelog/)** - Registro das mudanças feitas neste blog: novidades, ajustes de design e correções.
-
 **[RSS feed](/feed/)** - Acompanhe o blog no seu leitor de feeds, sem precisar visitar o site.
 
