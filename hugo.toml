@@ -91,7 +91,7 @@ enableGitInfo = true
     url = '/sobre/'
     weight = 1
   [[menu.main]]
-    name = 'Blog'
+    name = 'Arquivo'
     url = '/posts/'
     weight = 2
   [[menu.main]]
