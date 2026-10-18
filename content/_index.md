@@ -67,7 +67,7 @@ description = 'O que uso no dia a dia'
 title = 'Fale comigo'
 
 [[groups.links]]
-href = 'mailto:contato@rcapitao.com'
+href = '/contato/'
 icon = 'envelope'
 title = 'Contato'
 description = 'contato@rcapitao.com'
