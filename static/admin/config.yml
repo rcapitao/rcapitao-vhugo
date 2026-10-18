@@ -27,12 +27,12 @@ collections:
   # layouts/partials/biolink/ e assets/biolink/. Para um ícone novo, salve o
   # SVG em assets/biolink/icons/ e acrescente o nome nas opções abaixo.
   - name: home
-    label: "Página inicial (bio link)"
+    label: "Home (Bio-Link)"
     format: toml-frontmatter
     frontmatter_delimiter: "+++"
     files:
       - name: biolink
-        label: "Página inicial (bio link)"
+        label: "Home (Bio-Link)"
         file: content/_index.md
         fields:
           - { name: title, widget: hidden, default: "Rafael Capitão" }
@@ -155,28 +155,3 @@ collections:
       - *f_hidden
       - *f_aliases
       - { label: Corpo, name: body, widget: markdown }
-
-  - name: privacy_rocks_pages
-    label: "Privacy Rocks"
-    label_singular: Página
-    format: toml-frontmatter
-    frontmatter_delimiter: "+++"
-    # _index.md fica em "files" (sem exclusão): é a página da seção
-    # /privacy-rocks/ — apagá-la quebraria a seção inteira.
-    files:
-      - name: privacy_rocks
-        label: Privacy Rocks
-        file: content/privacy-rocks/_index.md
-        fields:
-          - *f_draft
-          - { label: Título, name: title, widget: string }
-          - { label: Data, name: date, widget: datetime, format: "YYYY-MM-DD HH:mm:ssZ", output_utc: true, required: false }
-          - { label: Descrição, name: description, widget: text }
-          - *f_showtoc
-          - *f_tocopen
-          - *f_showlastmod
-          - *f_noindex
-          - *f_searchhidden
-          - *f_hidden
-          - *f_aliases
-          - { label: Corpo, name: body, widget: markdown }
