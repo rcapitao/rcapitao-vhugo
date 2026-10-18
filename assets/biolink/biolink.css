@@ -781,8 +781,8 @@ button {
   color: var(--text-secondary);
 }
 
-.footer-note {
-  margin-top: 4px;
+.footer-note + p {
+  margin-top: 6px;
 }
 
 .footer-note a {
