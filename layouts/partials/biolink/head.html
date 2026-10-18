@@ -72,6 +72,7 @@
 {{- end }}
 
 <link rel="preload" href="{{ "fonts/open-sans-latin-wght-normal.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{ "fonts/source-serif-4-latin-700.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
 {{- $css := resources.Get "biolink/biolink.css" | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
 {{- $js := resources.Get "biolink/actions.js" | minify | fingerprint }}

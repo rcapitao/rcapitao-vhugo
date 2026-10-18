@@ -46,6 +46,15 @@ description = 'Insights práticos sobre Privacidade, Proteção de Dados e IA. U
 button = 'Assinar no LinkedIn'
 
 [[groups]]
+title = 'Sobre mim'
+
+[[groups.links]]
+href = '/sobre/'
+icon = 'user'
+title = 'Sobre'
+description = 'Minha trajetória em privacidade e proteção de dados'
+
+[[groups]]
 title = 'Conteúdo'
 
 [[groups.links]]
@@ -54,7 +63,7 @@ latest = true
 [[groups.links]]
 href = '/posts/'
 icon = 'globe'
-title = 'Blog'
+title = 'Arquivo'
 description = 'Artigos sobre privacidade e segurança da informação'
 
 [[groups.links]]
@@ -62,6 +71,12 @@ href = '/apps-ferramentas/'
 icon = 'screwdriver-wrench'
 title = 'Apps e ferramentas'
 description = 'O que uso no dia a dia'
+
+[[groups.links]]
+href = '/diretorio/'
+icon = 'compass'
+title = 'Diretório'
+description = 'Todo o conteúdo do site em um só lugar'
 
 [[groups]]
 title = 'Fale comigo'
