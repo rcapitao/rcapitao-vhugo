@@ -160,18 +160,17 @@ collections:
       - { label: Corpo, name: body, widget: markdown }
 
   - name: privacy_rocks_pages
-    label: "Privacy Rocks — Páginas"
+    label: "Privacy Rocks"
     label_singular: Página
     format: toml-frontmatter
     frontmatter_delimiter: "+++"
-    # _index.md e edicoes.md continuam em "files" (sem exclusão): são
-    # páginas estruturais da seção /privacy-rocks/, não publicações
-    # avulsas — apagá-las quebraria a seção inteira.
+    # _index.md fica em "files" (sem exclusão): é a página da seção
+    # /privacy-rocks/ — apagá-la quebraria a seção inteira.
     files:
       - name: privacy_rocks
         label: Privacy Rocks
         file: content/privacy-rocks/_index.md
-        fields: &pr_page_fields
+        fields:
           - *f_draft
           - { label: Título, name: title, widget: string }
           - { label: Data, name: date, widget: datetime, format: "YYYY-MM-DD HH:mm:ssZ", output_utc: true, required: false }
@@ -184,39 +183,3 @@ collections:
           - *f_hidden
           - *f_aliases
           - { label: Corpo, name: body, widget: markdown }
-      - name: privacy_rocks_indice
-        label: "Privacy Rocks — Índice de Edições"
-        file: content/privacy-rocks/edicoes.md
-        fields: *pr_page_fields
-
-  - name: privacy_rocks_edicoes
-    label: "Privacy Rocks — Edições"
-    label_singular: Edição
-    folder: content/privacy-rocks
-    create: true
-    delete: true
-    slug: "{{slug}}"
-    format: toml-frontmatter
-    frontmatter_delimiter: "+++"
-    # Só pega os posts de edição (001.md, 002.md...), não _index.md nem
-    # edicoes.md — essas duas continuam editáveis em "Páginas". Filtrar
-    # pela tag (campo de lista) não funcionou no Sveltia, por isso usamos
-    # um campo escondido dedicado em vez disso.
-    filter:
-      field: privacyRocksEdition
-      value: true
-    fields:
-      - *f_draft
-      - { name: privacyRocksEdition, widget: hidden, default: true }
-      - { label: Título, name: title, widget: string }
-      - { label: Data, name: date, widget: datetime, format: "YYYY-MM-DD HH:mm:ssZ", output_utc: true }
-      - { label: Descrição, name: description, widget: text }
-      - { label: Etiquetas, name: tags, widget: tags-select, tag_options: ["Citações", "Dicas", "Filmes", "Governança de Privacidade", "Guias", "Inteligência Artificial", "LGPD", "Livros", "Privacidade", "Privacy Rocks", "Produtividade", "Reflexão", "Segurança da Informação", "Sharenting"] }
-      - *f_showtoc
-      - *f_tocopen
-      - *f_showlastmod
-      - *f_noindex
-      - *f_searchhidden
-      - *f_hidden
-      - *f_aliases
-      - { label: Corpo, name: body, widget: markdown }

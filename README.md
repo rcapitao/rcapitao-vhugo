@@ -29,7 +29,7 @@ O blog continua em [/posts/](https://rcapitao.com/posts/), com os mesmos endere�
 ## Conteúdo
 
 - `content/posts/` — posts do blog
-- `content/*.md` — páginas fixas do site (Sobre, Diretório, Agora, Apps e Ferramentas, Certificações, Changelog, RSS, Links, Style Guide, Busca)
+- `content/*.md` — páginas fixas do site (Sobre, Diretório, Agora, Apps e Ferramentas, Certificações, RSS, Links, Style Guide, Busca)
 - Todas as páginas usam front matter TOML; campos reconhecidos (`ShowToc`, `TocOpen`, `series`, `lastmod`, `noindex`, `searchHidden`, `hidden`, `sitemap.disable`, etc.) estão documentados ao vivo em [`/style-guide/`](https://rcapitao.com/style-guide/)
 
 ## Desenvolvimento local

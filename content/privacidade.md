@@ -78,7 +78,7 @@ Para exercer qualquer um desses direitos, entre em contato pela página [Contato
 
 ## 11. Alterações nesta política
 
-Esta política pode ser atualizada para refletir mudanças no site ou na legislação aplicável. A data no topo da página indica a versão mais recente. Mudanças relevantes também serão registradas no [changelog](/changelog/) do site.
+Esta política pode ser atualizada para refletir mudanças no site ou na legislação aplicável. A data no topo da página indica a versão mais recente.
 
 ## 12. Contato
 
