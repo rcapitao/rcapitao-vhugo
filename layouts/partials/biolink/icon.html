@@ -10,7 +10,7 @@
 {{- $name = replaceRE `^fa[a-z]* fa-` "" $name -}}
 {{- with resources.Get (printf "biolink/icons/%s.svg" $name) -}}
 {{- $svg := replaceRE `<!--.*?-->` "" .Content -}}
-{{- replace $svg "<svg " (printf `<svg class="icon %s" aria-hidden="true" focusable="false" ` $class) | safeHTML -}}
+{{- replace $svg "<svg " (printf `<svg class="icon %s" data-icon="%s" aria-hidden="true" focusable="false" ` $class $name) | safeHTML -}}
 {{- else -}}
 {{- errorf "Ícone não encontrado: assets/biolink/icons/%s.svg" $name -}}
 {{- end -}}

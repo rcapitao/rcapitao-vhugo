@@ -22,4 +22,12 @@ Se quiser trocar ideias ou discutir temas relacionados a privacidade, proteção
 
 ## Quer se conectar comigo?
 
-Quer conversar sobre privacidade ou algum projeto? Entre em [contato](/contato/) ou envie uma mensagem nas [redes sociais](/links). Estou por aqui!
+{{% details summary="Redes Sociais" %}}
+
+- [LinkedIn](https://linkedin.com/in/rafaelcapitao/)
+- [Instagram](https://instagram.com/rafael.capitao/)
+- [Mastodon](https://mastodon.social/@rcapitao)
+- [Bluesky](https://bsky.app/profile/rcapitao.com)
+- [X / Twitter](https://x.com/rafaelcapitao)
+- [Github](https://github.com/rcapitao)
+{{% /details %}}
