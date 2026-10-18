@@ -1,68 +1,34 @@
-{{ define "main" }}
+{{- /*
+  Página inicial: bio link (cartões de links).
+  Página completa e independente: não usa baseof.html, header.html, footer.html
+  nem main.css do blog. O conteúdo vem de content/_index.md (editável no CMS em
+  "Página inicial (bio link)"); os partials ficam em layouts/partials/biolink/
+  e o visual em assets/biolink/biolink.css.
+*/ -}}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  {{- partial "biolink/head.html" . }}
+</head>
+<body class="biolink">
+  <main class="page">
+    {{ partial "biolink/profile.html" . }}
 
-<section class="hero">
-  {{- with site.Params.homeImage }}
-  {{- $relPath := strings.TrimLeft "/" . }}
-  {{- $img := resources.Get $relPath }}
-  {{- if $img }}
-  {{- $heroImg := $img.Fill "240x240 center q80" }}
-  <img src="{{ $heroImg.RelPermalink }}" width="{{ $heroImg.Width }}" height="{{ $heroImg.Height }}" alt="{{ site.Params.author | default site.Title }}" class="hero-image">
-  {{- else }}
-  <img src="{{ $relPath | relURL }}" alt="{{ site.Params.author | default site.Title }}" class="hero-image">
-  {{- end }}
-  {{- end }}
-  <h1 class="hero-name">{{ site.Params.homeTitle | default site.Title }}</h1>
-  {{- with site.Params.homeSubtitle }}
-  <p class="hero-subtitle">{{ . }}</p>
-  {{- end }}
-  {{- with site.Params.homeBio }}
-  <p class="hero-bio">{{ . | markdownify }}</p>
-  {{- end }}
-  {{- with site.Params.socialLinks }}
-  <nav class="hero-links" aria-label="Social links">
-    {{- range . }}
-    {{- $icon := resources.Get (printf "icon/%s.svg" (lower .name)) }}
-    <a href="{{ strings.TrimPrefix "/" .url | relURL }}" {{ if .external }}target="_blank" rel="noopener noreferrer"{{ end }} aria-label="{{ .name }}" title="{{ .name }}">
-      {{- if $icon }}{{ $icon.Content | safeHTML }}{{ else }}{{ .name }}{{ end -}}
-    </a>
-    {{- end }}
-  </nav>
-  {{- end }}
+    {{ partial "biolink/featured.html" . }}
 
-  {{- with site.Params.homeExplore }}
-  <div class="hero-tags-wrap">
-    <p class="hero-tags-label">{{ i18n "home_tags_label" | default "Explore" }}</p>
-    <nav class="hero-tags" aria-label="Links em destaque">
-      {{- range . }}
-      <a href="{{ strings.TrimPrefix "/" .url | relURL }}">{{ .label }}</a>
-      {{- end }}
-    </nav>
-  </div>
-  {{- end }}
-</section>
+    {{ partial "biolink/link-card.html" . }}
 
-{{- $recentCount := site.Params.recentPostsCount | default 3 }}
-{{- $posts := where site.RegularPages "Section" "posts" }}
-{{- with $posts | first $recentCount }}
-<section class="recent-posts">
-  <div class="recent-header">
-    <h2>{{ i18n "recent" | default "Recent" }}</h2>
-    <a href="{{ "posts/" | relURL }}" class="view-all">{{ i18n "view_all" | default "View all" }} &rarr;</a>
-  </div>
-  <ul class="post-list">
-    {{- range . }}
-    <li class="post-entry">
-      <a href="{{ .Permalink }}" class="post-entry-link">
-        <h3 class="post-entry-title">{{ .Title }}</h3>
-        {{ partial "post_meta.html" . }}
-        {{- with .Description | default .Summary }}
-        <p class="post-entry-summary">{{ . | plainify | truncate 160 }}</p>
-        {{- end }}
-      </a>
-    </li>
-    {{- end }}
-  </ul>
-</section>
-{{- end }}
+    {{ partial "biolink/actions.html" . }}
 
-{{ end }}
+    <footer class="footer">
+      <p>© {{ now.Year }} {{ .Params.name | default site.Title }} | Feito com ❤️</p>
+      <p class="footer-note">
+        {{- with .Params.footerNote }}{{ . }} {{ end -}}
+        <a href="{{ "privacidade/" | relURL }}">Privacidade</a> · <a href="{{ "feed/" | relURL }}">RSS</a>
+      </p>
+    </footer>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

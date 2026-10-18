@@ -1,0 +1,23 @@
+{{/* Bio link: grupos de links com título, no estilo dos Ajustes do iOS */}}
+{{ range $g, $group := .Params.groups }}
+<section class="group" aria-labelledby="group-{{ $g }}">
+  <h2 class="group-title reveal" id="group-{{ $g }}" style="--i: {{ add (mul $g 3) 2 }}">{{ $group.title }}</h2>
+  <div class="links">
+    {{ range $i, $l := $group.links }}
+      {{ $pos := add (mul $g 3) $i 3 }}
+      {{ if $l.latest }}
+        {{ partial "biolink/latest-post.html" (dict "i" $pos) }}
+      {{ else }}
+      <a class="link-card reveal" href="{{ $l.href }}" style="--i: {{ $pos }}">
+        <span class="link-icon">{{ partial "biolink/icon.html" ($l.icon | default "globe") }}</span>
+        <span class="link-text">
+          <span class="link-title">{{ $l.title }}</span>
+          {{ with $l.description }}<span class="link-desc">{{ . }}</span>{{ end }}
+        </span>
+        {{ partial "biolink/icon.html" (dict "name" "chevron-right" "class" "link-chevron") }}
+      </a>
+      {{ end }}
+    {{ end }}
+  </div>
+</section>
+{{ end }}

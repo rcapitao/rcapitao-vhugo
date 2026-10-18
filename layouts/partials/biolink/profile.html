@@ -1,0 +1,19 @@
+{{/* Bio link: foto, nome, subtítulo e redes sociais */}}
+<header class="profile reveal">
+  {{ with .Params.profileImage }}
+    {{/* remove a "/" inicial, se houver */}}
+    <img class="profile-pic" src="{{ replaceRE "^/" "" . | relURL }}" alt="{{ $.Params.name }}" width="112" height="112">
+  {{ end }}
+  <h1 class="profile-name">{{ .Params.name }}</h1>
+  {{ with .Params.subtitle }}<p class="profile-desc">{{ . }}</p>{{ end }}
+
+  {{ with .Params.socials }}
+  <nav class="socials" aria-label="Redes sociais">
+    {{ range . }}
+      <a class="social" href="{{ .url }}" target="_blank" rel="me noopener"{{ with .name }} aria-label="{{ . }}" title="{{ . }}"{{ end }}>
+        {{ partial "biolink/icon.html" .icon }}
+      </a>
+    {{ end }}
+  </nav>
+  {{ end }}
+</header>
