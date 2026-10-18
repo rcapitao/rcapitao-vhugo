@@ -266,6 +266,16 @@ button {
   transform: scale(0.94);
 }
 
+/* Equaliza o peso visual dos logos: cada ícone da Font Awesome tem uma
+   folga interna diferente dentro do próprio desenho, então na mesma
+   altura (1em) alguns parecem maiores (LinkedIn, Instagram, Mastodon)
+   e outros menores (Bluesky, X, GitHub). */
+.social svg[data-icon="bluesky"],
+.social svg[data-icon="x-twitter"],
+.social svg[data-icon="github"] {
+  height: 1.14em;
+}
+
 /* Cartões de link */
 .links {
   display: flex;
