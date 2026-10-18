@@ -32,10 +32,10 @@
     {{ partial "biolink/actions.html" . }}
 
     <footer class="footer">
-      <p>Rafael feito com ❤️</p>
       <p class="footer-note">
         <a href="{{ "contato/" | relURL }}">Contato</a> · <a href="{{ "privacidade/" | relURL }}">Privacidade</a> · <a href="{{ "feed/" | relURL }}">RSS feed</a>
       </p>
+      <p>© {{ now.Year }} {{ .Params.name | default site.Title }} | Feito com ❤️</p>
     </footer>
   </main>
 
