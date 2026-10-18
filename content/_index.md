@@ -4,7 +4,6 @@ name = 'Rafael Capitão'
 subtitle = 'Advogado | Compliance, Privacidade e Proteção de Dados'
 profileImage = '/images/profile.jpg'
 ogImage = '/images/og-home.png'
-footerNote = 'Sem cookies; estatísticas de acesso anônimas.'
 
 [[socials]]
 name = 'LinkedIn'
