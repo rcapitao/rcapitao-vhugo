@@ -1,0 +1,16 @@
+{{- /*
+  Ícone SVG embutido na página (sem servidor externo).
+  Uso: {{ partial "biolink/icon.html" "globe" }} ou {{ partial "biolink/icon.html" (dict "name" "globe" "class" "extra") }}
+  Aceita também o formato antigo do Font Awesome ("fab fa-github").
+  Os arquivos ficam em assets/biolink/icons/ (Font Awesome Free, ícones CC BY 4.0).
+*/ -}}
+{{- $name := . -}}
+{{- $class := "" -}}
+{{- if reflect.IsMap . }}{{ $name = .name }}{{ $class = .class | default "" }}{{ end -}}
+{{- $name = replaceRE `^fa[a-z]* fa-` "" $name -}}
+{{- with resources.Get (printf "biolink/icons/%s.svg" $name) -}}
+{{- $svg := replaceRE `<!--.*?-->` "" .Content -}}
+{{- replace $svg "<svg " (printf `<svg class="icon %s" aria-hidden="true" focusable="false" ` $class) | safeHTML -}}
+{{- else -}}
+{{- errorf "Ícone não encontrado: assets/biolink/icons/%s.svg" $name -}}
+{{- end -}}

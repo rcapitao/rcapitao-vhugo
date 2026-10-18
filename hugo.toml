@@ -55,14 +55,10 @@ enableGitInfo = true
 [params]
   description = 'Rafael Capitão, advogado especializado em compliance, privacidade e proteção de dados. Artigos sobre segurança da informação e privacidade digital.'
   author = 'Rafael Capitão'
-  homeTitle = 'Rafael Capitão'
   homeMetaTitle = 'Rafael Capitão | Advogado de Privacidade e Proteção de Dados'
   homeImage = '/images/profile.jpg'
   ogImage = '/images/profile.jpg'
   favicon = '/images/favicon.png'
-  homeSubtitle = 'Advogado | Compliance, Privacidade e Proteção de Dados'
-  homeBio = 'Regulamentação e melhores práticas para a segurança da informação e a privacidade no ambiente digital'
-  recentPostsCount = 3
 
   [[params.socialLinks]]
     name = 'LinkedIn'
@@ -88,19 +84,6 @@ enableGitInfo = true
     name = 'Github'
     url = 'https://github.com/rcapitao'
     external = true
-
-  [[params.homeExplore]]
-    label = 'Blog'
-    url = '/posts/'
-  [[params.homeExplore]]
-    label = 'Tags'
-    url = '/tags/'
-  [[params.homeExplore]]
-    label = 'Diretório'
-    url = '/diretorio/'
-  [[params.homeExplore]]
-    label = 'Links'
-    url = '/links/'
 
 [menu]
   [[menu.main]]

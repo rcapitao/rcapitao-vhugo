@@ -1,0 +1,22 @@
+{{/* Bio link: compartilhar e QR code */}}
+{{ $qr := images.QR .Permalink (dict "level" "medium" "scale" 8 "targetDir" "images") }}
+<div class="actions reveal" style="--i: 8">
+  <button type="button" class="action" data-share data-title="{{ .Params.name | default .Site.Title }}" data-url="{{ .Permalink }}">
+    {{ partial "biolink/icon.html" "arrow-up-from-bracket" }} Compartilhar
+  </button>
+  <button type="button" class="action" data-qr-open>
+    {{ partial "biolink/icon.html" "qrcode" }} QR code
+  </button>
+</div>
+
+<dialog class="qr-dialog" id="qr-dialog" aria-labelledby="qr-title">
+  <h2 class="qr-title" id="qr-title">Aponte a câmera do celular</h2>
+  <div class="qr-frame">
+    <img src="{{ $qr.RelPermalink }}" width="{{ $qr.Width }}" height="{{ $qr.Height }}" alt="QR code com o link {{ .Permalink }}">
+  </div>
+  <p class="qr-url">{{ replaceRE `^https?://` "" .Permalink | strings.TrimSuffix "/" }}</p>
+  <div class="qr-buttons">
+    <a class="action" href="{{ $qr.RelPermalink }}" download="qrcode-{{ urlize .Site.Title }}.png">{{ partial "biolink/icon.html" "download" }} Baixar</a>
+    <button type="button" class="action action-primary" data-qr-close>Fechar</button>
+  </div>
+</dialog>

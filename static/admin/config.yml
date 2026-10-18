@@ -22,6 +22,73 @@ media_folder: static/images/posts
 public_folder: /images/posts
 
 collections:
+  # Página inicial (rcapitao.com): bio link com os cartões de links.
+  # Edita content/_index.md; o visual fica em layouts/index.html,
+  # layouts/partials/biolink/ e assets/biolink/. Para um ícone novo, salve o
+  # SVG em assets/biolink/icons/ e acrescente o nome nas opções abaixo.
+  - name: home
+    label: "Página inicial (bio link)"
+    format: toml-frontmatter
+    frontmatter_delimiter: "+++"
+    files:
+      - name: biolink
+        label: "Página inicial (bio link)"
+        file: content/_index.md
+        fields:
+          - { name: title, widget: hidden, default: "Rafael Capitão" }
+          - { name: profileImage, widget: hidden, default: "/images/profile.jpg" }
+          - { name: ogImage, widget: hidden, default: "/images/og-home.png" }
+
+          # --- Perfil ---------------------------------------------------------
+          - { label: Nome, name: name, widget: string }
+          - { label: Subtítulo, name: subtitle, widget: string, hint: "Aparece abaixo do nome." }
+          - label: Redes sociais
+            name: socials
+            widget: list
+            summary: "{{fields.name}}"
+            hint: "Botões redondos abaixo do subtítulo, na ordem da lista."
+            fields:
+              - { label: Nome, name: name, widget: string, hint: "Lido por leitores de tela e mostrado ao passar o mouse." }
+              - { label: Endereço, name: url, widget: string }
+              - { label: Ícone, name: icon, widget: select, options: [{ label: "Globo (site, blog)", value: globe }, { label: "Envelope (e-mail)", value: envelope }, { label: "Ferramentas", value: screwdriver-wrench }, { label: "Sino (novidades)", value: bell }, { label: "LinkedIn", value: linkedin }, { label: "Instagram", value: instagram }, { label: "Mastodon", value: mastodon }, { label: "Bluesky", value: bluesky }, { label: "X (Twitter)", value: x-twitter }, { label: "GitHub", value: github }] }
+
+          # --- Destaque -------------------------------------------------------
+          - label: Destaque
+            name: featured
+            widget: object
+            required: false
+            hint: "Cartão grande logo abaixo do perfil."
+            fields:
+              - { label: Link, name: href, widget: string }
+              - { label: Imagem, name: image, widget: image, required: false, hint: "Proporção 4:1 (ex.: 1200×300)." }
+              - { label: Descrição da imagem, name: imageAlt, widget: string, required: false, hint: "Para leitores de tela." }
+              - { label: Rótulo, name: eyebrow, widget: string, required: false, hint: "Texto pequeno acima do título, ex.: Newsletter." }
+              - { label: Título, name: title, widget: string }
+              - { label: Descrição, name: description, widget: text, required: false }
+              - { label: Texto do botão, name: button, widget: string, required: false }
+
+          # --- Links ----------------------------------------------------------
+          - label: Grupos de links
+            name: groups
+            widget: list
+            summary: "{{fields.title}}"
+            hint: "Cada grupo tem um título (ex.: Conteúdo, Fale comigo) e seus cartões."
+            fields:
+              - { label: Título do grupo, name: title, widget: string }
+              - label: Cartões
+                name: links
+                widget: list
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Último post (automático)", name: latest, widget: boolean, required: false, default: false, hint: "Marcado, este cartão mostra sozinho o post mais recente do blog e os campos abaixo são ignorados." }
+                  - { label: Título, name: title, widget: string, required: false }
+                  - { label: Descrição, name: description, widget: string, required: false }
+                  - { label: Link, name: href, widget: string, required: false, hint: "Página do site (ex.: /posts/), endereço completo (https://...) ou mailto:email@..." }
+                  - { label: Ícone, name: icon, widget: select, options: [{ label: "Globo (site, blog)", value: globe }, { label: "Envelope (e-mail)", value: envelope }, { label: "Ferramentas", value: screwdriver-wrench }, { label: "Sino (novidades)", value: bell }, { label: "LinkedIn", value: linkedin }, { label: "Instagram", value: instagram }, { label: "Mastodon", value: mastodon }, { label: "Bluesky", value: bluesky }, { label: "X (Twitter)", value: x-twitter }, { label: "GitHub", value: github }], required: false, hint: "Se ficar vazio, usa o globo." }
+
+          # --- Rodapé ---------------------------------------------------------
+          - { label: Frase do rodapé, name: footerNote, widget: string, required: false }
+
   - name: posts
     label: Publicações
     label_singular: Publicação

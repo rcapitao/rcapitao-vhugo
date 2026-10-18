@@ -1,0 +1,89 @@
+{{- /* Bio link: <head> da página inicial (independente do head.html do blog) */ -}}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="Hugo {{ hugo.Version }}">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F8F8F9">
+
+{{- $title := site.Params.homeMetaTitle | default site.Title }}
+{{- $desc := .Description | default site.Params.description }}
+<title>{{ $title }}</title>
+<meta name="description" content="{{ $desc }}">
+<link rel="canonical" href="{{ .Permalink }}">
+{{- if not hugo.IsProduction }}
+<meta name="robots" content="noindex, nofollow">
+{{- end }}
+
+{{/* Tema: segue a escolha feita no botão de tema do blog (localStorage "theme");
+     sem escolha, segue o sistema. Roda antes de desenhar a página. */}}
+<script>
+  (function () {
+    var saved = null;
+    try { saved = localStorage.getItem('theme'); } catch (e) {}
+    if (saved === 'dark' || saved === 'light') document.documentElement.dataset.theme = saved;
+    var dark = saved === 'dark' || (saved !== 'light' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', dark ? '#1C2442' : '#F8F8F9');
+  })();
+</script>
+
+{{/* Prévia ao compartilhar (WhatsApp, LinkedIn, X...) */}}
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="{{ site.Title }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:title" content="{{ .Params.name | default site.Title }}">
+<meta property="og:description" content="{{ .Params.subtitle | default $desc }}">
+{{- with .Params.ogImage }}
+{{- $img := strings.TrimPrefix "/" . | absURL }}
+<meta property="og:image" content="{{ $img }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:alt" content="{{ $.Params.name | default site.Title }} · {{ $.Params.subtitle }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="{{ $img }}">
+{{- end }}
+<meta name="twitter:title" content="{{ .Params.name | default site.Title }}">
+<meta name="twitter:description" content="{{ .Params.subtitle | default $desc }}">
+
+{{/* Dados estruturados (Google) */}}
+{{- $sameAs := slice }}
+{{- range .Params.socials }}{{ $sameAs = $sameAs | append .url }}{{ end }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "url": {{ .Permalink }},
+  "name": {{ $title }},
+  "mainEntity": {
+    "@type": "Person",
+    "name": {{ .Params.name | default site.Params.author }},
+    "description": {{ .Params.subtitle | default $desc }},
+    "url": {{ .Permalink }}{{ with .Params.profileImage }},
+    "image": {{ strings.TrimPrefix "/" . | absURL }}{{ end }}{{ with $sameAs }},
+    "sameAs": {{ . }}{{ end }}
+  }
+}
+</script>
+
+{{/* RSS do blog */}}
+{{- with site.Home.OutputFormats.Get "RSS" }}
+<link rel="alternate" type="application/rss+xml" title="{{ site.Title }}" href="{{ .Permalink }}">
+{{- end }}
+
+<link rel="preload" href="{{ "fonts/open-sans-latin-wght-normal.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
+{{- $css := resources.Get "biolink/biolink.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+{{- $js := resources.Get "biolink/actions.js" | minify | fingerprint }}
+<script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
+
+<link rel="manifest" href="{{ "manifest.json" | relURL }}">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ "images/apple-touch-icon.png" | relURL }}">
+{{- with site.Params.favicon }}
+<link rel="icon" type="image/png" sizes="32x32" href="{{ strings.TrimPrefix "/" . | relURL }}">
+{{- end }}
+
+{{/* Estatísticas de acesso sem cookies (o mesmo GoatCounter do blog; ver /privacidade/) */}}
+{{- if hugo.IsProduction }}
+<script data-goatcounter="https://rcapitao.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+{{- end }}

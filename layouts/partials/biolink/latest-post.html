@@ -1,0 +1,17 @@
+{{- /*
+  Bio link: cartão "Último post", com o post mais recente da seção posts/.
+  Atualiza sozinho a cada publicação do site (rascunhos e posts com data futura não entram).
+  Recebe: dict "i" (posição para a animação).
+*/ -}}
+{{- with (where site.RegularPages "Section" "posts").ByDate.Reverse | first 1 -}}
+{{- with index . 0 -}}
+<a class="link-card link-card-latest reveal" href="{{ .RelPermalink }}" style="--i: {{ $.i }}">
+  <span class="link-icon">{{ partial "biolink/icon.html" "bell" }}</span>
+  <span class="link-text">
+    <span class="link-title">Último post</span>
+    <span class="link-desc">{{ .Title }}<br>{{ .Date | time.Format ":date_long" }}</span>
+  </span>
+  {{ partial "biolink/icon.html" (dict "name" "chevron-right" "class" "link-chevron") }}
+</a>
+{{- end -}}
+{{- end -}}

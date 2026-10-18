@@ -1,0 +1,16 @@
+{{/* Bio link: cartão de destaque (newsletter) */}}
+{{ with .Params.featured }}
+<a class="featured reveal" href="{{ .href }}" style="--i: 1">
+  {{ with .image }}
+    <img class="featured-image" src="{{ replaceRE "^/" "" . | relURL }}" alt="{{ $.Params.featured.imageAlt | default $.Params.featured.title }}" width="1200" height="300" loading="eager">
+  {{ end }}
+  <span class="featured-body">
+    {{ with .eyebrow }}<span class="featured-eyebrow">{{ . }}</span>{{ end }}
+    <span class="featured-title">{{ .title }}</span>
+    {{ with .description }}<span class="featured-desc">{{ . }}</span>{{ end }}
+    {{ with .button }}
+      <span class="featured-button">{{ . }} {{ partial "biolink/icon.html" (dict "name" "chevron-right" "class" "featured-button-icon") }}</span>
+    {{ end }}
+  </span>
+</a>
+{{ end }}
