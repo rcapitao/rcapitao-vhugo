@@ -17,5 +17,3 @@ Minha intenção é traduzir esse aprendizado a em conteúdo realmente útil par
 Cada edição reúne análises diretas, tendências relevantes, aprendizados de projetos reais, riscos emergentes e reflexões que conectam privacidade com valor de negócio, além de dicas práticas para quem quer fortalecer sua própria segurança e privacidade no dia a dia.
 
 As edições são publicadas **mensalmente**, sempre no primeiro dia do mês.
-
-Para acessar todas as postagens [clique aqui](/privacy-rocks/edicoes/).
