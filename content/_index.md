@@ -63,7 +63,7 @@ latest = true
 [[groups.links]]
 href = '/posts/'
 icon = 'globe'
-title = 'Arquivo'
+title = 'Blog'
 description = 'Artigos sobre privacidade e segurança da informação'
 
 [[groups.links]]
@@ -71,12 +71,6 @@ href = '/apps-ferramentas/'
 icon = 'screwdriver-wrench'
 title = 'Apps e ferramentas'
 description = 'O que uso no dia a dia'
-
-[[groups.links]]
-href = '/diretorio/'
-icon = 'compass'
-title = 'Diretório'
-description = 'Todo o conteúdo do site em um só lugar'
 
 [[groups]]
 title = 'Fale comigo'

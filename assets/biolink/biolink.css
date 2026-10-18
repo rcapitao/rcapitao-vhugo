@@ -193,7 +193,7 @@ button {
 .page {
   max-width: 480px;
   margin: 0 auto;
-  padding: 56px 20px 40px;
+  padding: 24px 20px 40px;
 }
 
 /* Perfil */
@@ -388,12 +388,17 @@ button {
   color: var(--card-hover-secondary);
 }
 
-/* Alternar tema */
-.theme-toggle {
-  position: fixed;
-  top: 20px;
-  right: 20px;
+/* Cabeçalho: fixo no topo (como o header do blog), só com o botão de tema */
+.page-header {
+  position: sticky;
+  top: 0;
   z-index: 10;
+  display: flex;
+  justify-content: flex-end;
+  padding: 16px 20px 0;
+}
+
+.theme-toggle {
   display: inline-flex;
   align-items: center;
   justify-content: center;
