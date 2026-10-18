@@ -11,6 +11,10 @@
   {{- partial "biolink/head.html" . }}
 </head>
 <body class="biolink">
+  {{/* Verificação de link no Mastodon (rel="me"); o ícone social abaixo já leva rel="me",
+       este link extra, oculto, segue à risca o HTML que o Mastodon pede para o verificador. */}}
+  <a rel="me" href="https://mastodon.social/@rcapitao" style="display:none">Mastodon</a>
+
   <main class="page">
     {{ partial "biolink/profile.html" . }}
 
