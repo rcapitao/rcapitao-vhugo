@@ -22,6 +22,8 @@ Se quiser trocar ideias ou discutir temas relacionados a privacidade, proteção
 
 ## Quer se conectar comigo?
 
+Quer conversar sobre privacidade ou algum projeto? Entre em [contato](/contato/) ou envie uma mensagem nas redes sociais. Estou por aqui!
+
 {{% details summary="Redes Sociais" %}}
 
 - [LinkedIn](https://linkedin.com/in/rafaelcapitao/)
