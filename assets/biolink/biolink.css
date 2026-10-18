@@ -56,12 +56,6 @@
   --shadow-sm: 0 1px 2px rgba(28, 36, 66, 0.06);
   --shadow-md: 0 1px 2px rgba(28, 36, 66, 0.06), 0 4px 16px rgba(28, 36, 66, 0.06);
   --shadow-lg: 0 2px 4px rgba(28, 36, 66, 0.08), 0 12px 32px rgba(28, 36, 66, 0.16);
-
-  /* Manchas de luz bem discretas atrás dos cartões — dão profundidade ao
-     "vidro fosco" das superfícies (backdrop-filter), estilo Control Center. */
-  --wash: radial-gradient(circle at 12% 0%, rgba(193, 207, 228, 0.35) 0%, transparent 38%),
-          radial-gradient(circle at 92% 18%, rgba(143, 149, 196, 0.22) 0%, transparent 36%),
-          radial-gradient(circle at 15% 85%, rgba(139, 43, 38, 0.07) 0%, transparent 34%);
 }
 
 /* Modo escuro: segue o sistema, a menos que o botão de tema do blog tenha
@@ -95,9 +89,6 @@
     --shadow-sm: none;
     --shadow-md: inset 0 1px 0 rgba(248, 248, 249, 0.04);
     --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.35);
-    --wash: radial-gradient(circle at 12% 0%, rgba(193, 207, 228, 0.16) 0%, transparent 40%),
-            radial-gradient(circle at 92% 18%, rgba(143, 149, 196, 0.18) 0%, transparent 38%),
-            radial-gradient(circle at 15% 85%, rgba(139, 43, 38, 0.14) 0%, transparent 36%);
   }
 }
 
@@ -129,9 +120,6 @@
   --shadow-sm: none;
   --shadow-md: inset 0 1px 0 rgba(248, 248, 249, 0.04);
   --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.35);
-  --wash: radial-gradient(circle at 12% 0%, rgba(193, 207, 228, 0.16) 0%, transparent 40%),
-          radial-gradient(circle at 92% 18%, rgba(143, 149, 196, 0.18) 0%, transparent 38%),
-          radial-gradient(circle at 15% 85%, rgba(139, 43, 38, 0.14) 0%, transparent 36%);
 }
 
 /* Curva de animação no estilo iOS */
@@ -156,8 +144,7 @@ body {
   font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  background: var(--wash) var(--bg-color);
-  background-attachment: fixed;
+  background-color: var(--bg-color);
   color: var(--text-color);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
