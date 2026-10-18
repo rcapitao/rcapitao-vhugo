@@ -34,8 +34,7 @@
     <footer class="footer">
       <p>© {{ now.Year }} {{ .Params.name | default site.Title }} | Feito com ❤️</p>
       <p class="footer-note">
-        {{- with .Params.footerNote }}{{ . }} {{ end -}}
-        <a href="{{ "privacidade/" | relURL }}">Privacidade</a> · <a href="{{ "feed/" | relURL }}">RSS</a>
+        <a href="{{ "contato/" | relURL }}">Contato</a> · <a href="{{ "privacidade/" | relURL }}">Privacidade</a> · <a href="{{ "feed/" | relURL }}">RSS feed</a>
       </p>
     </footer>
   </main>
