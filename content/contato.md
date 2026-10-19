@@ -13,4 +13,6 @@ hidden = false
 aliases = []
 +++
 
-Se tiver dúvidas, sugestões ou quiser conversar sobre qualquer tema que apareça por aqui, estou à disposição. É só [enviar uma mensagem](mailto:contato@rcapitao.com), ficarei feliz em responder.
+Se tiver dúvidas, sugestões ou quiser conversar sobre qualquer tema que apareça por aqui, estou à disposição. Preencha o formulário abaixo ou [envie um e-mail](mailto:contato@rcapitao.com), ficarei feliz em responder.
+
+<script data-letterbirduser="contato" src="https://letterbird.co/embed/v1.js"></script>
