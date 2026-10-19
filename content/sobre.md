@@ -6,6 +6,8 @@ showLastmod = true
 title = 'Sobre'
 +++
 
+{{< profile-photo >}}
+
 Ao longo da minha trajetória, construí uma carreira dedicada à Privacidade, Proteção de Dados e Segurança da Informação. Comecei pela área jurídica, onde desenvolvi uma base sólida para interpretar normas, identificar riscos regulatórios e estruturar programas de privacidade alinhados às legislações nacionais e internacionais.
 
 Com o tempo, percebi que a privacidade exige uma visão multidisciplinar e foi essa compreensão que me levou a ampliar minha formação. Além de advogado, sou pós-graduado em Cibersegurança e Proteção Digital de Negócios, o que aprofunda minha capacidade de dialogar com times técnicos, avaliar controles, entender arquiteturas e apoiar decisões estratégicas com mais precisão.
