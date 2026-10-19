@@ -78,5 +78,5 @@ title = 'Fale comigo'
 href = '/contato/'
 icon = 'envelope'
 title = 'Contato'
-description = 'Envie uma mensagem pelo formulário do site'
+description = 'Envie uma mensagem'
 +++
