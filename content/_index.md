@@ -78,5 +78,5 @@ title = 'Fale comigo'
 href = '/contato/'
 icon = 'envelope'
 title = 'Contato'
-description = 'contato@rcapitao.com'
+description = 'Envie uma mensagem pelo formulário do site'
 +++
