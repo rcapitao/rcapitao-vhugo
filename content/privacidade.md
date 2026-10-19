@@ -7,7 +7,7 @@ showLastmod = true
 
 ## Resumo rápido
 
-Este é um blog pessoal. Ele não usa cookies de rastreamento, não vende dados, não tem newsletter com captura de e-mail neste domínio e só compartilha dados de navegação, de forma agregada e não identificável, com um terceiro (um serviço de estatísticas de acesso), descrito abaixo em detalhe. Se você me escrever por e-mail, essa mensagem chega direto a mim, sem passar por nenhum serviço intermediário. Se você só quer saber o essencial, é isso. O restante desta página existe para quem quiser (ou precisar) do detalhe.
+Este é um blog pessoal. Ele não usa cookies de rastreamento, não vende dados e não tem newsletter com captura de e-mail neste domínio. Dados de navegação são compartilhados, de forma agregada e não identificável, com um terceiro (um serviço de estatísticas de acesso); o formulário da página de Contato é processado por um segundo terceiro (Letterbird), que encaminha sua mensagem para mim. Ambos descritos abaixo em detalhe. Se você só quer saber o essencial, é isso. O restante desta página existe para quem quiser (ou precisar) do detalhe.
 
 ## 1. Quem trata os seus dados
 
@@ -38,11 +38,11 @@ O que isso significa na prática:
 
 Quando você alterna entre modo claro e escuro, essa escolha é salva no seu próprio navegador (via `localStorage`). Esse dado **nunca sai do seu dispositivo**, não é enviado a este ou a qualquer servidor, não é um cookie e não permite identificação. Ele só existe para lembrar sua preferência na próxima visita.
 
-## 5. Contato por e-mail
+## 5. Formulário de contato (Letterbird)
 
-A página [Contato](/contato/) traz um link direto para **contato@rcapitao.com**. Se você me escrever, o e-mail (seu endereço, nome se você o incluir, e o conteúdo da mensagem) é recebido diretamente por mim, sem passar por nenhum serviço intermediário de terceiros, não há formulário, não há operador externo nesse fluxo.
+A página [Contato](/contato/) usa um formulário fornecido pelo [Letterbird](https://letterbird.co/), um serviço de terceiros. Ao preencher e enviar o formulário, os dados informados (nome, e-mail e o conteúdo da mensagem) são processados pelos servidores do Letterbird, que então encaminha a mensagem para mim por e-mail — diferente de uma mensagem direta, ela passa por esse operador externo antes de chegar a mim. Para detalhes sobre como o Letterbird trata esses dados do lado dele, consulte a [política de privacidade do Letterbird](https://letterbird.co/privacy).
 
-Mantenho o histórico dessa correspondência para poder dar continuidade à conversa caso você escreva novamente, e pelo tempo que a legislação eventualmente exigir. A entrega técnica do e-mail passa pelo meu provedor de e-mail, como acontece com qualquer mensagem enviada pela internet.
+Mantenho o histórico dessa correspondência para poder dar continuidade à conversa caso você escreva novamente, e pelo tempo que a legislação eventualmente exigir.
 
 ## 6. Newsletter Privacy Rocks
 
@@ -59,7 +59,7 @@ Este site **não usa cookies** para rastreamento, publicidade ou análise. O ún
 ## 9. Retenção de dados
 
 - **Estatísticas de acesso**: nenhum dado pessoal é retido (ver item 3) — os hashes de IP são descartados em até 8 horas e nunca chegam a ser dados pessoais identificáveis.
-- **E-mails de contato**: retidos pelo tempo necessário para responder e dar continuidade à conversa, ou pelo prazo de guarda que a legislação eventualmente exigir. Você pode pedir a exclusão a qualquer momento (ver item 10).
+- **Mensagens de contato**: retidas pelo tempo necessário para responder e dar continuidade à conversa, ou pelo prazo de guarda que a legislação eventualmente exigir. Você pode pedir a exclusão a qualquer momento (ver item 10). Do lado do Letterbird, a retenção segue a política de privacidade própria dele (ver item 5).
 
 ## 10. Seus direitos como titular de dados
 
