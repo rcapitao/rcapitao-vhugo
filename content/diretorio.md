@@ -18,6 +18,15 @@ Se você está procurando algo específico, esta página vai te direcionar para 
   <svg class="directory-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
 </a>
 
+<a class="directory-card" href="/contato/">
+  <span class="directory-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-8.9 8.4 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.3a8.4 8.4 0 0 1-.9-3.8A8.4 8.4 0 0 1 12.4 3a8.4 8.4 0 0 1 8.6 8.1z"/></svg></span>
+  <span class="directory-body">
+    <span class="directory-title">Contato</span>
+    <span class="directory-desc">Dúvidas, sugestões ou só quer trocar uma ideia. É só chamar.</span>
+  </span>
+  <svg class="directory-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+</a>
+
 <a class="directory-card" href="/privacy-rocks/">
   <span class="directory-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
   <span class="directory-body">
