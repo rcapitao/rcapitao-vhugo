@@ -63,7 +63,7 @@ latest = true
 href = '/posts/'
 icon = 'globe'
 title = 'Blog'
-description = 'Artigos sobre privacidade e segurança da informação'
+description = 'Conteúdos sobre privacidade e proteção de dados'
 
 [[groups.links]]
 href = '/apps-ferramentas/'
