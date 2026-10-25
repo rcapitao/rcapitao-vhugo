@@ -1,10 +1,16 @@
 +++
-aliases = ['/uses/']
+draft = false
 cms_page = true
-date = '2026-03-26'
-description = 'Curioso sobre o que outras pessoas usam? Eu também. Aqui compartilho os dispositivos, aplicativos e serviços que escolho usar no meu dia a dia.'
+title = "Ferramentas e Apps que eu uso"
+date = "2026-03-26"
+description = "Curioso sobre o que outras pessoas usam? Eu também. Aqui compartilho os dispositivos, aplicativos e serviços que escolho usar no meu dia a dia."
+ShowToc = true
+TocOpen = true
 showLastmod = true
-title = 'Ferramentas e Apps que eu uso'
+noindex = false
+searchHidden = false
+hidden = false
+aliases = [ "/uses/" ]
 +++
 
 A lista abaixo reúne os dispositivos, aplicativos e serviços que utilizo no dia a dia. Não é muita coisa, até porque meu uso de tecnologia é bastante seletivo, mas assim como me interesso pelo que outras pessoas usam, talvez alguém se interesse pelo que eu uso também.
