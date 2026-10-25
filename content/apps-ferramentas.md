@@ -34,7 +34,7 @@ A lista abaixo reúne os dispositivos, aplicativos e serviços que utilizo no di
 ### Produtividade
 
 - Notas: [Obsidian](https://obsidian.md/)
-- Tarefas: [Things](https://culturedcode.com/things/) ~~Todoist~~
+- Tarefas: [Todoist](https://todoist.com/)
 - Processamento de texto: [Word](https://www.microsoft.com/pt-br/microsoft-365/word/)
 - Planilhas: [Excel](https://www.microsoft.com/pt-br/microsoft-365/excel)
 - Apresentações: [PowerPoint](https://www.microsoft.com/pt-br/microsoft-365/powerpoint/) / [Canva](https://www.canva.com/) / [Gamma](https://gamma.app/)
