@@ -2,8 +2,7 @@
 draft = false
 title = "Privacy by Design que chega tarde"
 date = "2026-10-28 22:39:00+00:00"
-description = "Quando o projeto chega pronto, Privacy by Design vira conferência. Entenda por que avaliar privacidade tarde gera retrabalho, atraso e fama de burocracia."
-tags = [ "Governança de Privacidade", "Privacidade" ]
+description = "Entenda por que avaliar privacidade tarde gera retrabalho, atraso e fama de burocracia."
 series = ""
 ShowToc = false
 TocOpen = false
@@ -12,6 +11,7 @@ noindex = false
 searchHidden = false
 hidden = false
 aliases = []
+tags = [ "Governança de Privacidade", "Privacidade" ]
 +++
 
 A maior dificuldade de Privacy by Design que encontro está no momento em que o projeto chega para a área de privacidade.
