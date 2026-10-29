@@ -72,6 +72,15 @@ title = 'Apps e ferramentas'
 description = 'O que uso no dia a dia'
 
 [[groups]]
+title = 'Livro'
+
+[[groups.links]]
+href = 'https://editoraimperio.com.br/produto/encarregados-desafios-experiencias-e-perspectivas/'
+icon = 'book'
+title = 'Encarregados: desafios, experiências e perspectivas'
+description = 'Compre o livro na Editora Império'
+
+[[groups]]
 title = 'Fale comigo'
 
 [[groups.links]]
